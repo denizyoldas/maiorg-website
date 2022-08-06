@@ -1,4 +1,5 @@
 import React from 'react'
+import { meta } from '../site.config'
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 
 function Info() {
@@ -29,15 +30,15 @@ function Info() {
           </div>
           <div className="col-md-6">
             <div className="info_social_container">
-              <h5>Follow Us</h5>
+              <h5>Bizi Takip Edin</h5>
               <div className="info_social">
-                <a href="">
+                <a href={'https://facebook.com/' + meta.social.facebook}>
                   <FaFacebookF />
                 </a>
-                <a href="">
+                <a href={'https://twitter.com/' + meta.social.twitter}>
                   <FaTwitter />
                 </a>
-                <a href="">
+                <a href={'https://instagram.com/' + meta.social.instagram}>
                   <FaInstagram />
                 </a>
                 {/* <a href="">
@@ -46,7 +47,7 @@ function Info() {
                 <a href="">
                   <i className="fa fa-linkedin" aria-hidden="true"></i>
                 </a> */}
-                <a href="">
+                <a href={'https://youtube.com/' + meta.social.youtube}>
                   <FaYoutube />
                 </a>
               </div>

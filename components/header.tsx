@@ -6,7 +6,8 @@ function Header() {
       <div className="container">
         <nav className="navbar navbar-expand-lg custom_nav-container ">
           <a className="navbar-brand" href="index.html">
-            <span>Mai</span>
+            {/* <span>Mai Organizasyon</span> */}
+            <img src="images/logo.png" style={{ width: '200px' }} alt="" />
           </a>
 
           <button

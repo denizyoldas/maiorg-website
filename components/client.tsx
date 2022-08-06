@@ -1,18 +1,19 @@
 import React from 'react'
+import shortid from 'shortid'
 
 const testimonials = [
   {
-    name: 'Deniz Aksu',
+    name: shortid.generate(),
     quote: 'I am a full-stack developer and I love to create things.',
     avatar: 'https://denizaksu.dev/images/avatar.jpg'
   },
   {
-    name: 'Deniz Aksu',
+    name: shortid.generate(),
     quote: 'I am a full-stack developer and I love to create things.',
     avatar: 'https://denizaksu.dev/images/avatar.jpg'
   },
   {
-    name: 'Deniz Aksu',
+    name: shortid.generate(),
     quote: 'I am a full-stack developer and I love to create things.',
     avatar: 'https://denizaksu.dev/images/avatar.jpg'
   }
@@ -26,7 +27,7 @@ function Client() {
     <section className="client_section layout_padding-bottom">
       <div className="container">
         <div className="heading_container heading_center">
-          <h2>Testimonial</h2>
+          <h2>Referanslarımız</h2>
         </div>
         <div
           id="carouselExample2Indicators"

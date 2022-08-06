@@ -1,4 +1,5 @@
 import React from 'react'
+import { meta } from '../site.config'
 
 function Contact() {
   return (
@@ -28,7 +29,7 @@ function Contact() {
                   />
                 </div>
                 <div className="btn_box">
-                  <button>Gönder</button>
+                  <button type="button">Gönder</button>
                 </div>
               </form>
             </div>
@@ -36,7 +37,13 @@ function Contact() {
           <div className="col-md-6">
             <div className="map_container">
               <div className="map">
-                <div id="googleMap"></div>
+                {/* <div id="googleMap"></div> */}
+                <iframe
+                  src={meta.gmap}
+                  width="600"
+                  height="450"
+                  loading="lazy"
+                ></iframe>
               </div>
             </div>
           </div>

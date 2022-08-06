@@ -2,7 +2,7 @@ import React from 'react'
 
 function Service() {
   return (
-    <section className="service_section layout_padding-bottom">
+    <section className="service_section layout_padding-bottom" id="services">
       <div className="service_container">
         <div className="container ">
           <div className="heading_container heading_center">
