@@ -66,7 +66,7 @@ body {
   bottom: 0;
   width: 50px;
   height: 3px;
-  background: #224a9b;
+  background: #0081bc;
   border-radius: 10px;
 }
 
@@ -191,7 +191,7 @@ a:focus {
 }
 
 .custom_nav-container .navbar-nav .nav-item .nav-link:hover {
-  color: #224a9b;
+  color: #0081bc;
 }
 
 .custom_nav-container .nav_search-btn {
@@ -200,7 +200,7 @@ a:focus {
   padding: 0;
   border: none;
   color: #ffffff;
-  background: #224a9b;
+  background: #0081bc;
 }
 
 .custom_nav-container .navbar-toggler {
@@ -312,7 +312,7 @@ a:focus {
 .slider_section .detail-box .btn-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #224a9b;
+  background-color: #0081bc;
   color: #ffffff;
   border-radius: 5px;
   -webkit-transition: all 0.3s;
@@ -341,7 +341,7 @@ a:focus {
   position: unset;
   width: 50px;
   height: 50px;
-  background-color: #224a9b;
+  background-color: #0081bc;
   opacity: 1;
   color: #ffffff;
   font-size: 18px;
@@ -377,7 +377,7 @@ a:focus {
 .about_section .detail-box a {
   display: inline-block;
   padding: 10px 35px;
-  background-color: #224a9b;
+  background-color: #0081bc;
   color: #ffffff;
   border-radius: 5px;
   -webkit-transition: all 0.3s;
@@ -442,7 +442,7 @@ a:focus {
   min-width: 125px;
   height: 125px;
   margin-bottom: 15px;
-  background: #224a9b;
+  background: #0081bc;
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -500,9 +500,9 @@ a:focus {
     left top,
     right top,
     from(#87fbf6),
-    to(#224a9b)
+    to(#0081bc)
   );
-  background: linear-gradient(to right, #224a9b, #002c3e);
+  background: linear-gradient(to right, #0081bc, #002c3e);
 }
 
 .gallery_section .heading_container {
@@ -592,7 +592,7 @@ a:focus {
 .gallery_section .see_btn a {
   display: inline-block;
   padding: 12px 60px;
-  background-color: #224a9b;
+  background-color: #0081bc;
   color: #ffffff;
   border-radius: 5px;
   -webkit-transition: all 0.3s;
@@ -658,7 +658,7 @@ a:focus {
   text-align: center;
   display: inline-block;
   padding: 12px 55px;
-  background-color: #224a9b;
+  background-color: #0081bc;
   color: #ffffff;
   border-radius: 5px;
   -webkit-transition: all 0.3s;
@@ -735,7 +735,7 @@ a:focus {
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  background-color: #224a9b;
+  background-color: #0081bc;
   z-index: 2;
 }
 
@@ -787,7 +787,7 @@ a:focus {
 
 .client_section ol.carousel-indicators li {
   opacity: 1;
-  background-color: #224a9b;
+  background-color: #0081bc;
   width: 35px;
   height: 5px;
   border-radius: 9px;
@@ -832,7 +832,7 @@ a:focus {
 }
 
 .info_section .contact_link_box a:hover {
-  color: #224a9b;
+  color: #0081bc;
 }
 
 .info_section .info_social {
@@ -862,7 +862,7 @@ a:focus {
 }
 
 .info_section .info_social a:hover {
-  color: #224a9b;
+  color: #0081bc;
 }
 
 /* footer section*/
@@ -881,4 +881,16 @@ a:focus {
 .footer_section p a {
   color: inherit;
 }
+
+.whatsapp-button {
+  width: 70px;
+  height: 70px;
+  transition: all 0.3s ease-in-out;
+}
+
+.whatsapp-button:hover {
+  width: 80px;
+  height: 80px;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -8,13 +8,13 @@ const slides = [
     id: shortid.generate(),
     title: 'Sizin için <br /> en uygun hizmet',
     description:
-      'Biz siler icin variz ve sizin icin elimizden gelen herseyi yapmaya haziriz',
+      'Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.',
     button: 'Hizmetlermiz',
     buttonLink: '#services'
   },
   {
     id: shortid.generate(),
-    title: 'Bizimle iletişimie geçebilir <br /> detaylı bilgi alabilirsiniz.',
+    title: 'detaylı bilgi için <br /> İletişime geçebilirsiniz',
     description:
       'Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.',
     button: 'İletişim',

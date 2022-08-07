@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import shortid from 'shortid'
 import AboutUs from '../components/about-us'
 import Client from '../components/client'
 import Contact from '../components/contact'
@@ -11,6 +12,30 @@ import Info from '../components/info'
 import Service from '../components/service'
 import Slider from '../components/slider'
 import WhatsappButton from '../components/whatsapp'
+import { meta } from '../site.config'
+
+const LIST = [
+  {
+    id: shortid.generate(),
+    title: 'Title 1',
+    image: 'images/g1.jpg'
+  },
+  {
+    id: shortid.generate(),
+    title: 'Title 2',
+    image: 'images/g2.jpg'
+  },
+  {
+    id: shortid.generate(),
+    title: 'Title 3',
+    image: 'images/g3.jpg'
+  },
+  {
+    id: shortid.generate(),
+    title: 'Title 4',
+    image: 'images/g4.jpg'
+  }
+]
 
 const Home: NextPage = () => {
   return (
@@ -35,13 +60,13 @@ const Home: NextPage = () => {
 
       <AboutUs />
       <Service />
-      <Gallery />
+      <Gallery list={LIST} isMore />
       <Contact />
       <Client />
       <Info />
       <Footer />
 
-      <WhatsappButton />
+      {meta.whatsappShow && <WhatsappButton />}
     </>
   )
 }

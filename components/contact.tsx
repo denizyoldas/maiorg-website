@@ -1,7 +1,13 @@
 import React from 'react'
 import { meta } from '../site.config'
+import { ToastContainer, toast } from 'react-toastify'
 
 function Contact() {
+  const notify = () =>
+    toast.success(
+      'Başarılı bir şekilde gönderildi. En kısa süre içerisinde size geri dönüş yapılacaktır.'
+    )
+
   return (
     <section id="contact" className="contact_section layout_padding">
       <div className="container">
@@ -29,7 +35,9 @@ function Contact() {
                   />
                 </div>
                 <div className="btn_box">
-                  <button type="button">Gönder</button>
+                  <button type="button" onClick={notify}>
+                    Gönder
+                  </button>
                 </div>
               </form>
             </div>
@@ -49,6 +57,7 @@ function Contact() {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </section>
   )
 }

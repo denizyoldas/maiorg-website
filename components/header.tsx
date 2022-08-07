@@ -1,13 +1,18 @@
+import Link from 'next/link'
 import React from 'react'
 
-function Header() {
+interface Props {
+  style?: object
+}
+
+function Header({ style }: Props) {
   return (
-    <header className="header_section">
+    <header className="header_section" style={style}>
       <div className="container">
         <nav className="navbar navbar-expand-lg custom_nav-container ">
           <a className="navbar-brand" href="index.html">
-            {/* <span>Mai Organizasyon</span> */}
-            <img src="images/logo.png" style={{ width: '200px' }} alt="" />
+            <span>Mai Organizasyon</span>
+            {/* <img src="images/logo.png" style={{ width: '200px' }} alt="" /> */}
           </a>
 
           <button
@@ -25,9 +30,9 @@ function Header() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav">
               <li className="nav-item active">
-                <a className="nav-link" href="#slider">
-                  Anasayfa
-                </a>
+                <Link className="nav-link" href="/">
+                  <a className="nav-link">Anasayfa</a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#about">

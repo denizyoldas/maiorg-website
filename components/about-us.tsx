@@ -13,12 +13,11 @@ function AboutUs() {
                 <h2>Hakkımızda</h2>
               </div>
               <p>
-                Mai Mis Organizasyon ve Danışmanlık olarak sizleri günlük
-                yoğunluklarınızdan kurtararak küçük çaplı bir organizasyon veya
-                büyük partileri profesyonel bir iş olarak ele alıp, özgün,
-                yaratıcı ve kişiye özel yaklaşımlarla, organizasyon sürecine
-                farklı bir bakış açısı getiriyor. Sizi mutlu ederek mutlu olmayı
-                amaçlıyoruz.
+                Mai Organizasyon olarak hayatınızın her anında yanınızda olmak
+                ve bu anları mükemmel bir şekilde doldurmak bizim en büyük
+                ilkemizidir. Sizin hayallerinizi gerçeğe dönüştürmek için her
+                imkanı ve fırsatı değerlendirerek olanakları sonsuza indirgemeyi
+                hedefliyoruz.
               </p>
               <div className="btn-box">
                 <a href="">Daha Fazla</a>
