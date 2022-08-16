@@ -8,15 +8,14 @@ const slides = [
     id: shortid.generate(),
     title: 'Sizin için <br /> en uygun hizmet',
     description:
-      'Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.',
+      'Fiyat ve kaliteyi en iyi şekilde göstermek için, sizin için en uygun hizmet',
     button: 'Hizmetlermiz',
     buttonLink: '#services'
   },
   {
     id: shortid.generate(),
-    title: 'detaylı bilgi için <br /> İletişime geçebilirsiniz',
-    description:
-      'Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.',
+    title: 'Düğün hizmetleri',
+    description: 'Düğün organizasyonları en iyi şekilde düzenleni.',
     button: 'İletişim',
     buttonLink: '#contact'
   }

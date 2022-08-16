@@ -13,7 +13,7 @@ function WhatsappButton() {
       <a target="_blank" rel="noreferrer" href="https://wa.me/+905343489348">
         <img
           className="whatsapp-button"
-          src="https://img.icons8.com/color/48/000000/whatsapp.png"
+          src="https://img.icons8.com/color/80/000000/whatsapp.png"
         />
         {/* <img src="svg/whatsapp.svg" alt="" /> */}
         {/* <FaWhatsappSquare size={50} /> */}
