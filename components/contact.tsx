@@ -3,10 +3,20 @@ import { meta } from '../site.config'
 import { ToastContainer, toast } from 'react-toastify'
 
 function Contact() {
-  const notify = () =>
+  const submitHandler = event => {
+    event.preventDefault()
+
+    const payload = {
+      name: event.target.name.value,
+      phone: event.target.phone.value,
+      email: event.target.email.value,
+      message: event.target.message.value
+    }
+
     toast.success(
       'Başarılı bir şekilde gönderildi. En kısa süre içerisinde size geri dönüş yapılacaktır.'
     )
+  }
 
   return (
     <section id="contact" className="contact_section layout_padding">
@@ -17,27 +27,26 @@ function Contact() {
         <div className="row">
           <div className="col-md-6">
             <div className="form_container contact-form">
-              <form action="">
+              <form action="" onSubmit={submitHandler}>
                 <div>
-                  <input type="text" placeholder="Ad Soyad" />
+                  <input type="text" placeholder="Ad Soyad" name="name" />
                 </div>
                 <div>
-                  <input type="text" placeholder="Telefon" />
+                  <input type="text" placeholder="Telefon" name="phone" />
                 </div>
                 <div>
-                  <input type="email" placeholder="Email" />
+                  <input type="email" placeholder="Email" name="email" />
                 </div>
                 <div>
                   <input
                     type="text"
                     className="message-box"
                     placeholder="Mesajınız"
+                    name="message"
                   />
                 </div>
                 <div className="btn_box">
-                  <button type="button" onClick={notify}>
-                    Gönder
-                  </button>
+                  <button type="submit">Gönder</button>
                 </div>
               </form>
             </div>
