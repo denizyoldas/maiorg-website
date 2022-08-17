@@ -3,7 +3,7 @@ import { meta } from '../site.config'
 import { ToastContainer, toast } from 'react-toastify'
 
 function Contact() {
-  const submitHandler = event => {
+  const submitHandler = (event: any) => {
     event.preventDefault()
 
     const payload = {
