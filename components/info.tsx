@@ -46,13 +46,22 @@ function Info() {
             <div className="info_social_container">
               <h5>Bizi Takip Edin</h5>
               <div className="info_social">
-                <a href={'https://facebook.com/' + meta.social.facebook}>
+                <a
+                  href={'https://facebook.com/' + meta.social.facebook}
+                  rel="nofollow"
+                >
                   <FaFacebookF />
                 </a>
-                <a href={'https://twitter.com/' + meta.social.twitter}>
+                <a
+                  href={'https://twitter.com/' + meta.social.twitter}
+                  rel="nofollow"
+                >
                   <FaTwitter />
                 </a>
-                <a href={'https://instagram.com/' + meta.social.instagram}>
+                <a
+                  href={'https://instagram.com/' + meta.social.instagram}
+                  rel="nofollow"
+                >
                   <FaInstagram />
                 </a>
                 {/* <a href="">
@@ -61,7 +70,10 @@ function Info() {
                 <a href="">
                   <i className="fa fa-linkedin" aria-hidden="true"></i>
                 </a> */}
-                <a href={'https://youtube.com/' + meta.social.youtube}>
+                <a
+                  href={'https://youtube.com/' + meta.social.youtube}
+                  rel="nofollow"
+                >
                   <FaYoutube />
                 </a>
               </div>

@@ -56,7 +56,7 @@ function Client() {
             <SwiperSlide key={item.id}>
               <div className="client_box">
                 <div className="img-box">
-                  <img src="images/client.jpg" alt="" />
+                  <img src="images/client.jpg" alt="evli çift" />
                 </div>
                 <div className="detail-box">
                   <h5>{item.name}</h5>

@@ -8,13 +8,11 @@ export const meta = {
     email: 'daksu30@gmail.com'
   },
   social: {
-    twitter: '@mai_organizasyon',
-    facebook: '@mai_organizasyon',
-    instagram: '@maiorganizasyon_',
-    linkedin: '@mai_organizasyon',
-    youtube: '@mai_organizasyon',
-    github: '@mai_organizasyon',
-    stackoverflow: '@mai_organizasyon'
+    twitter: 'mai_organizasyon',
+    facebook: 'mai_organizasyon',
+    instagram: 'maiorganizasyon_',
+    linkedin: 'mai_organizasyon',
+    youtube: 'mai_organizasyon'
   },
   contact: {
     email: 'info@maiorganizasyon.com',
