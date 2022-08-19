@@ -17,6 +17,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
     "react-modal": "^3.15.1",
+    "react-modal-image": "^2.5.0",
     "react-toastify": "^9.0.8",
     "shortid": "^2.2.16",
     "swiper": "^8.3.2"

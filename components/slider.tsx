@@ -1,6 +1,5 @@
 import React from 'react'
 import { Carousel } from 'react-bootstrap'
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 import shortid from 'shortid'
 
 const slides = [
@@ -15,7 +14,10 @@ const slides = [
   {
     id: shortid.generate(),
     title: 'Düğün hizmetleri',
-    description: 'Düğün organizasyonları en iyi şekilde düzenleni.',
+    description: `Düğünlerinizi yapacağınız yerlerin belirlenmesinin ardından
+    sizlere istekleriniz doğrultusunda paket içeriklerini baz
+    alarak süsleme ve DJ hizmetleri ile birlikte düğün planınızı
+    hazırlıyoruz.`,
     button: 'İletişim',
     buttonLink: '#contact'
   }
@@ -45,14 +47,6 @@ function Slider() {
           </Carousel.Item>
         ))}
       </Carousel>
-      {/* <div className="carousel_btn-box">
-        <a className="carousel-control-prev" role="button" data-slide="prev">
-          <AiOutlineArrowLeft />
-        </a>
-        <a className="carousel-control-next" role="button" data-slide="next">
-          <AiOutlineArrowRight />
-        </a>
-      </div> */}
     </section>
   )
 }

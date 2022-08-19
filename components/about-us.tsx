@@ -27,10 +27,18 @@ function AboutUs() {
           <div className="col-md-6 img_container">
             <div className="row">
               <div className="col-6">
-                <img src="images/a1.jpg" className="about_img1" alt="" />
+                <img
+                  src="images/a1.jpg"
+                  className="about_img1"
+                  alt="düğün çifti bir arada"
+                />
               </div>
               <div className="col-6 px-0">
-                <img src="images/a2.jpg" className="about_img2" alt="" />
+                <img
+                  src="images/a2.jpg"
+                  className="about_img2"
+                  alt="düğün organizasyonunda çiftler"
+                />
               </div>
             </div>
           </div>
