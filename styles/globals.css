@@ -900,7 +900,7 @@ a:focus {
 
   .detail-box {
     margin-top: 0 !important;
-    padding: 35px 35px 30px 45px !important;
+    /* padding: 35px 35px 30px 45px !important; */
   }
 
   .img-box {

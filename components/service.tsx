@@ -23,9 +23,8 @@ function Service() {
                   <h5>Düğün planı</h5>
                   <p>
                     Düğünlerinizi yapacağınız yerlerin belirlenmesinin ardından
-                    sizlere istekleriniz doğrultusunda paket içeriklerini baz
-                    alarak süsleme ve DJ hizmetleri ile birlikte düğün planınızı
-                    hazırlıyoruz.
+                    sizlere istekleriniz doğrultusunda süsleme ve DJ hizmetleri
+                    ile birlikte düğün planınızı hazırlıyoruz.
                   </p>
                 </div>
               </div>
