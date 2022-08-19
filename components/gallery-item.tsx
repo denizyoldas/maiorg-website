@@ -19,7 +19,7 @@ function GaleryItem({ image, alt }: Props) {
   return (
     <div className="col-sm-6 col-md-4 col-lg-3 mx-auto">
       <div className="box ">
-        <img src={image} alt="good image" alt={alt} />
+        <img src={image} alt={alt} />
         <div className="btn-box">
           <a
             style={{ cursor: 'pointer' }}
