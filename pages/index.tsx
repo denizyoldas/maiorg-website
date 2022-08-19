@@ -48,9 +48,12 @@ const Home: NextPage = () => {
         <title>Mai Organizasyon | Hayallerinize dokunun</title>
         <meta
           name="description"
-          content="Mai organizasyon gecenizi aydınlatmak için burada"
+          content="Mai Organizasyon olarak hayatınızın her anında yanınızda olmak
+          ve bu anları mükemmel bir şekilde doldurmak bizim en büyük
+          ilkemizidir. Sizin hayallerinizi gerçeğe dönüştürmek için her
+          imkanı ve fırsatı değerlendirerek olanakları sonsuza indirgemeyi
+          hedefliyoruz."
         />
-        <meta name="keywords" content="Mai, Organizasyon, Düğün, Doğum günü" />
         <meta name="author" content="Deniz Aksu" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
