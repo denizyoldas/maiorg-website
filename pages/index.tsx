@@ -83,6 +83,22 @@ const Home: NextPage = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://maiorganizasyon.com" />
         {/* <meta property="og:image" content="/images/large-profile.jpg" /> */}
+
+        {/* ga */}
+        {meta.ga && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${meta.ga}`}
+            />
+            <script
+              type="text/javascript"
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${meta.ga}');`
+              }}
+            />
+          </>
+        )}
       </Head>
       <div className="hero_area">
         <div className="hero_bg_box">

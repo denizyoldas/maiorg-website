@@ -2,7 +2,7 @@ export const meta = {
   title: 'Mai Organizasyon',
   description: 'Organizasyon oluşturmak için kullanılabilir bir platform.',
   url: '',
-  ga: '',
+  ga: 'G-NYT4W4Z9ZG',
   author: {
     name: 'Deniz Aksu',
     email: 'daksu30@gmail.com'
