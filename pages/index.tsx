@@ -7,6 +7,7 @@ import Client from '../components/client'
 import Contact from '../components/contact'
 import Footer from '../components/footer'
 import Gallery from '../components/gallery'
+import GoToTop from '../components/go-to-top'
 import Header from '../components/header'
 import Info from '../components/info'
 import Service from '../components/service'
@@ -83,22 +84,6 @@ const Home: NextPage = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://maiorganizasyon.com" />
         {/* <meta property="og:image" content="/images/large-profile.jpg" /> */}
-
-        {/* ga */}
-        {meta.ga && (
-          <>
-            <script
-              async
-              src={`https://www.googletagmanager.com/gtag/js?id=${meta.ga}`}
-            />
-            <script
-              type="text/javascript"
-              dangerouslySetInnerHTML={{
-                __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${meta.ga}');`
-              }}
-            />
-          </>
-        )}
       </Head>
       <div className="hero_area">
         <div className="hero_bg_box">
@@ -121,6 +106,7 @@ const Home: NextPage = () => {
       <Info />
       <Footer />
 
+      <GoToTop />
       {meta.whatsappShow && <WhatsappButton />}
     </>
   )

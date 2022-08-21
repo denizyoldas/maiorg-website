@@ -5,7 +5,7 @@ function WhatsappButton() {
     <div
       style={{
         position: 'fixed',
-        right: '15px',
+        left: '15px',
         bottom: '15px',
         zIndex: '100'
       }}

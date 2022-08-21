@@ -6,6 +6,7 @@ import NextDocument, {
   DocumentContext
 } from 'next/document'
 import Script from 'next/script'
+import { meta } from '../site.config'
 
 export default class MyDocument extends NextDocument {
   static getInitialProps(ctx: DocumentContext) {
@@ -25,6 +26,22 @@ export default class MyDocument extends NextDocument {
 
           <meta content="#ffffff" name="theme-color" />
           <meta content="#ffffff" name="msapplication-TileColor" />
+
+          {/* ga */}
+          {meta.ga && (
+            <>
+              <script
+                async
+                src={`https://www.googletagmanager.com/gtag/js?id=${meta.ga}`}
+              />
+              <script
+                type="text/javascript"
+                dangerouslySetInnerHTML={{
+                  __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${meta.ga}');`
+                }}
+              />
+            </>
+          )}
         </Head>
 
         <body>

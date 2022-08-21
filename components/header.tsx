@@ -1,11 +1,14 @@
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
+import cx from 'classnames'
 
 interface Props {
   style?: object
 }
 
 function Header({ style }: Props) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
   return (
     <header className="header_section" style={style}>
       <div className="container">
@@ -18,8 +21,7 @@ function Header({ style }: Props) {
           <button
             className="navbar-toggler"
             type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
@@ -27,7 +29,10 @@ function Header({ style }: Props) {
             <span className=""></span>
           </button>
 
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <div
+            className={cx('collapse navbar-collapse', { show: isMenuOpen })}
+            id="navbarSupportedContent"
+          >
             <ul className="navbar-nav">
               <li className="nav-item active">
                 <Link className="nav-link" href="/">
