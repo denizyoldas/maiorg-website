@@ -1,10 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from 'next/image'
 import React from 'react'
 
 function AboutUs() {
   return (
-    <section className="about_section layout_padding">
+    <section className="about_section layout_padding" id="about">
       <div className="container">
         <div className="row">
           <div className="col-md-6 ">

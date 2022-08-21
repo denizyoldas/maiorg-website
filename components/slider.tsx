@@ -26,7 +26,7 @@ const slides = [
 function Slider() {
   return (
     <section className="slider_section">
-      <Carousel controls={true} indicators={false} interval={2000}>
+      <Carousel controls={true} indicators={false} interval={3000}>
         {slides.map((item, index) => (
           <Carousel.Item key={item.id}>
             <div className="container ">
