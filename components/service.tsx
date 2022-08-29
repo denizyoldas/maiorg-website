@@ -17,7 +17,7 @@ function Service() {
             <div className="col-sm-6 ">
               <div className="box ">
                 <div className="img-box">
-                  <img src="images/s1.png" alt="düğün" />
+                  <img src="images/s1.webp" alt="düğün" />
                 </div>
                 <div className="detail-box">
                   <h5>Düğün planı</h5>
@@ -32,7 +32,7 @@ function Service() {
             <div className="col-sm-6 ">
               <div className="box ">
                 <div className="img-box">
-                  <img src="images/s2.png" alt="dekor" />
+                  <img src="images/s2.webp" alt="dekor" />
                 </div>
                 <div className="detail-box">
                   <h5>Düğün Dekoru</h5>
@@ -60,7 +60,7 @@ function Service() {
             <div className="col-sm-6 ">
               <div className="box ">
                 <div className="img-box">
-                  <img src="images/s4.png" alt="doğum günü" />
+                  <img src="images/s4.webp" alt="doğum günü" />
                 </div>
                 <div className="detail-box">
                   <h5>Düğün Mekanları</h5>
@@ -74,7 +74,7 @@ function Service() {
             <div className="col-sm-6 ">
               <div className="box ">
                 <div className="img-box">
-                  <img src="images/s5.png" alt="Yemek servisi" />
+                  <img src="images/s5.webp" alt="Yemek servisi" />
                 </div>
                 <div className="detail-box">
                   <h5>Yemek Servisi</h5>
@@ -88,7 +88,7 @@ function Service() {
             <div className="col-sm-6 ">
               <div className="box ">
                 <div className="img-box">
-                  <img src="images/s6.png" alt="Baby" />
+                  <img src="images/s6.webp" alt="Baby" />
                 </div>
                 <div className="detail-box">
                   <h5>Nişan Organizasyonu</h5>

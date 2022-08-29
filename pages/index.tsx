@@ -89,7 +89,7 @@ const Home: NextPage = () => {
         <div className="hero_bg_box">
           {/* <img src="images/hero-bg.jpg" /> */}
           <Image
-            src="/images/hero-bg.jpg"
+            src="/images/hero-bg.webp"
             alt="evli çift fotografı"
             layout="fill"
           />
