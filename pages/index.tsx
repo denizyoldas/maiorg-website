@@ -19,25 +19,25 @@ const LIST = [
   {
     id: shortid.generate(),
     title: 'Title 1',
-    image: 'images/g1.jpg',
+    image: 'images/g1.webp',
     alt: 'Düğün organizasyonu'
   },
   {
     id: shortid.generate(),
     title: 'Title 2',
-    image: 'images/g2.jpg',
+    image: 'images/g2.webp',
     alt: 'Baby Show organizasyonu'
   },
   {
     id: shortid.generate(),
     title: 'Title 3',
-    image: 'images/g3.jpg',
+    image: 'images/g3.webp',
     alt: 'Doğum günü organizasyonu'
   },
   {
     id: shortid.generate(),
     title: 'Title 4',
-    image: 'images/g4.jpg',
+    image: 'images/g4.webp',
     alt: 'Nişan organizasyonu'
   }
 ]
