@@ -46,7 +46,7 @@ function Service() {
             <div className="col-sm-6 ">
               <div className="box ">
                 <div className="img-box">
-                  <img src="images/s3.png" alt="nişan" />
+                  <img src="images/s3.webp" alt="nişan" />
                 </div>
                 <div className="detail-box">
                   <h5>Düğün Fotografları</h5>
