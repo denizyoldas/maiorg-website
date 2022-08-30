@@ -27,7 +27,7 @@ function AboutUs() {
             <div className="row">
               <div className="col-6">
                 <img
-                  src="images/a1.jpg"
+                  src="images/a1.webp"
                   className="about_img1"
                   alt="düğün çifti bir arada"
                 />
