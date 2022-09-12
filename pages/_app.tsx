@@ -3,6 +3,7 @@ import '../styles/globals.css'
 import 'react-toastify/dist/ReactToastify.css'
 import 'swiper/css'
 import 'swiper/css/navigation'
+import { AnimateSharedLayout } from 'framer-motion'
 
 import type { AppProps } from 'next/app'
 

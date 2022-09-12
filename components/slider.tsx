@@ -8,7 +8,7 @@ const slides = [
     title: 'Sizin için <br /> en uygun hizmet',
     description:
       'Fiyat ve kaliteyi en iyi şekilde göstermek için, sizin için en uygun hizmet',
-    button: 'Hizmetlermiz',
+    button: 'Hizmetlerimiz',
     buttonLink: '#services'
   },
   {

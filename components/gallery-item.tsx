@@ -1,41 +1,31 @@
-import React, { useState } from 'react'
 import { BsImage } from 'react-icons/bs'
-import { Lightbox } from 'react-modal-image'
+import cx from 'classnames'
 
 interface Props {
   id?: string
   title?: string
   image: string
   alt: string
+  type?: string
 }
 
-function GaleryItem({ image, alt }: Props) {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const imageClick = () => {
-    setIsOpen(true)
-  }
-
+function GalleryItem({ image, alt, type = 'grid' }: Props) {
   return (
-    <div className="col-sm-6 col-md-4 col-lg-3 mx-auto">
-      <div className="box ">
-        <img src={image} alt={alt} />
+    <div className={cx('box')}>
+      <img src={image} alt={alt} />
+      {type === 'grid' && (
         <div className="btn-box">
           <a
             style={{ cursor: 'pointer' }}
-            onClick={imageClick}
             data-toggle="lightbox"
             className="btn-1"
           >
             <BsImage />
           </a>
         </div>
-      </div>
-      {isOpen && (
-        <Lightbox hideDownload large={image} onClose={() => setIsOpen(false)} />
       )}
     </div>
   )
 }
 
-export default GaleryItem
+export default GalleryItem
