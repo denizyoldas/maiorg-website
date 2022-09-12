@@ -1,14 +1,25 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import ReactModal from 'react-modal'
 import GalleryItem from './gallery-item'
 import disableScroll from 'disable-scroll'
+import styled from 'styled-components'
 
 interface Props {
   list: any[]
   isMore: boolean
 }
+
+const CardBody = styled.div`
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 1;
+  overflow: hidden;
+  padding: 20px 0;
+  width: 100%;
+`
 
 function Gallery({ list, isMore }: Props) {
   const [selectedId, setSelectedId] = useState(null)
@@ -16,7 +27,7 @@ function Gallery({ list, isMore }: Props) {
 
   useEffect(() => {
     if (selectedId) {
-      disableScroll.on()
+      // disableScroll.on()
     } else {
       disableScroll.off()
     }
@@ -41,6 +52,7 @@ function Gallery({ list, isMore }: Props) {
                 setSelectedId(item.id)
                 setItem(item)
               }}
+              className="col-sm-6 col-md-4 col-lg-3 mx-auto"
             >
               <GalleryItem image={item.image} alt={item.alt} />
             </motion.div>
@@ -54,14 +66,35 @@ function Gallery({ list, isMore }: Props) {
       </div>
       <AnimatePresence>
         {selectedId && item && (
-          <div
-            className="bg-dark bg-opacity-75 w-100 h-100 position-absolute top-50 start-50 translate-middle"
-            onClick={() => {
-              setSelectedId(null)
-            }}
-          >
-            <GalleryItem image={item.image} alt={item.alt} type="modal" />
-          </div>
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0, transition: { duration: 0.15 } }}
+              transition={{ duration: 0.2, delay: 0.15 }}
+              style={{
+                pointerEvents: 'auto',
+                zIndex: 1,
+                willChange: 'opacity'
+              }}
+              className="bg-dark bg-opacity-75 w-100 h-100 position-fixed top-50 start-50 translate-middle"
+              onClick={() => {
+                setSelectedId(null)
+              }}
+            ></motion.div>
+            <CardBody
+              onClick={() => {
+                setSelectedId(null)
+              }}
+            >
+              <motion.div
+                layoutId={selectedId}
+                style={{ width: '400px', margin: '0 auto' }}
+              >
+                <GalleryItem image={item.image} alt={item.alt} type="modal" />
+              </motion.div>
+            </CardBody>
+          </>
         )}
       </AnimatePresence>
     </section>

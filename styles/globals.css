@@ -191,7 +191,8 @@ a:focus {
 }
 
 .custom_nav-container .navbar-nav .nav-item .nav-link:hover {
-  color: #0081bc;
+  /* color: #0081bc; */
+  background: #0081bc;
 }
 
 .custom_nav-container .nav_search-btn {

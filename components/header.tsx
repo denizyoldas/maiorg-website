@@ -13,7 +13,7 @@ function Header({ style }: Props) {
     <header className="header_section" style={style}>
       <div className="container">
         <nav className="navbar navbar-expand-lg custom_nav-container ">
-          <a className="navbar-brand" href="index.html">
+          <a className="navbar-brand" href="#">
             <span>Mai Organizasyon</span>
             {/* <img src="images/logo.webp" style={{ width: '200px' }} alt="" /> */}
           </a>

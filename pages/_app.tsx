@@ -8,11 +8,7 @@ import { AnimateSharedLayout } from 'framer-motion'
 import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <AnimateSharedLayout>
-      <Component {...pageProps} />
-    </AnimateSharedLayout>
-  )
+  return <Component {...pageProps} />
 }
 
 export default MyApp
