@@ -8,6 +8,7 @@ import styled from 'styled-components'
 interface Props {
   list: any[]
   isMore: boolean
+  style?: React.CSSProperties
 }
 
 const CardBody = styled.div`
@@ -21,7 +22,7 @@ const CardBody = styled.div`
   width: 100%;
 `
 
-function Gallery({ list, isMore }: Props) {
+function Gallery({ list, isMore, style }: Props) {
   const [selectedId, setSelectedId] = useState(null)
   const [item, setItem] = useState<{ image: string; alt: string }>()
 
@@ -37,6 +38,7 @@ function Gallery({ list, isMore }: Props) {
     <section
       className="gallery_section layout_padding position-relative"
       id="gallery"
+      style={style}
     >
       <div className="container">
         <div className="heading_container heading_center">

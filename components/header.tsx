@@ -1,10 +1,15 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import cx from 'classnames'
+import styled from 'styled-components'
 
 interface Props {
   style?: object
 }
+
+const Title = styled.span`
+  // font-family: 'Dancing Script', cursive;
+`
 
 function Header({ style }: Props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -14,8 +19,8 @@ function Header({ style }: Props) {
       <div className="container">
         <nav className="navbar navbar-expand-lg custom_nav-container ">
           <a className="navbar-brand" href="#">
-            <span>Mai Organizasyon</span>
-            {/* <img src="images/logo.webp" style={{ width: '200px' }} alt="" /> */}
+            <Title>Mai Organizasyon</Title>
+            {/* <img src="/logo-text.png" style={{ width: '200px' }} alt="" /> */}
           </a>
 
           <button

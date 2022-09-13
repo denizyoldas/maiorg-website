@@ -4,6 +4,7 @@ import shortid from 'shortid'
 import Gallery from '../components/gallery'
 import Header from '../components/header'
 import Image from 'next/image'
+import Head from 'next/head'
 
 const LIST = [
   {
@@ -35,8 +36,19 @@ const LIST = [
 const GalleryPage: NextPage = () => {
   return (
     <>
+      <Head>
+        <title>Mai Organizasyon | Resimlerimiz</title>
+        <meta
+          name="description"
+          content="Mai Organizasyon resim galerisinden istediğiniz organizasyonlar için seçimler yapabilirsiniz."
+        />
+      </Head>
       <Header style={{ backgroundColor: '#002c3e' }} />
-      <Gallery list={LIST} isMore={false} />
+      <Gallery
+        list={LIST}
+        isMore={false}
+        style={{ backgroundColor: '#fff !important' }}
+      />
     </>
   )
 }

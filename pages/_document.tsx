@@ -26,6 +26,7 @@ export default class MyDocument extends NextDocument {
 
           <meta content="#ffffff" name="theme-color" />
           <meta content="#ffffff" name="msapplication-TileColor" />
+          <link rel="icon" href="/logo.ico" />
 
           {/* ga */}
           {meta.ga && (
