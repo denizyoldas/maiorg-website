@@ -29,6 +29,30 @@ const LIST = [
     title: 'Title 4',
     image: 'images/g4.webp',
     alt: 'Nişan organizasyonu'
+  },
+  {
+    id: shortid.generate(),
+    title: 'tag kirmizi',
+    image: 'gallery/kirmizi-tag.jpeg',
+    alt: 'Düğün organizasyonu'
+  },
+  {
+    id: shortid.generate(),
+    title: 'tag siyah',
+    image: 'gallery/siyah-tag.jpeg',
+    alt: 'Düğün organizasyonu'
+  },
+  {
+    id: shortid.generate(),
+    title: 'tag kirmizi',
+    image: 'gallery/beyaz-tag.jpeg',
+    alt: 'Düğün organizasyonu'
+  },
+  {
+    id: shortid.generate(),
+    title: 'tag kirmizi',
+    image: 'gallery/yuvarlak-tag.jpeg',
+    alt: 'Düğün organizasyonu'
   }
 ]
 
