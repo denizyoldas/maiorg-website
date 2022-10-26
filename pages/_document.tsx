@@ -43,6 +43,8 @@ export default class MyDocument extends NextDocument {
               />
             </>
           )}
+
+          <script async src="https://cdn.splitbee.io/sb.js"></script>
         </Head>
 
         <body>
