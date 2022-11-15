@@ -11,16 +11,15 @@ interface Props {
 
 function GalleryItem({ image, alt, type = 'grid' }: Props) {
   return (
-    <div className={cx('box')}>
+    <div className="border-2 border-white relative group">
       <img src={image} alt={alt} />
       {type === 'grid' && (
-        <div className="btn-box">
+        <div className="absolute w-full h-full group-hover:flex hidden top-0 bg-slate-300/50 transition duration-300 items-center justify-center cursor-pointer">
           <a
-            style={{ cursor: 'pointer' }}
             data-toggle="lightbox"
-            className="btn-1"
+            className="bg-white rounded-full w-12 h-12 flex items-center justify-center"
           >
-            <BsImage />
+            <BsImage size={24} />
           </a>
         </div>
       )}

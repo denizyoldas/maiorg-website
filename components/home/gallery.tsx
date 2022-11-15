@@ -4,11 +4,12 @@ import React, { useEffect, useState } from 'react'
 import GalleryItem from './gallery-item'
 import disableScroll from 'disable-scroll'
 import styled from 'styled-components'
+import Title from '../UI/title'
 
 interface Props {
   list: any[]
-  isMore: boolean
   style?: React.CSSProperties
+  isMore?: boolean
 }
 
 const CardBody = styled.div`
@@ -16,13 +17,18 @@ const CardBody = styled.div`
   left: 0;
   right: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 60;
   overflow: hidden;
   padding: 20px 0;
   width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
-function Gallery({ list, isMore, style }: Props) {
+function Gallery({ list, style, isMore = true }: Props) {
   const [selectedId, setSelectedId] = useState(null)
   const [item, setItem] = useState<{ image: string; alt: string }>()
 
@@ -36,36 +42,35 @@ function Gallery({ list, isMore, style }: Props) {
 
   return (
     <section
-      className="gallery_section layout_padding position-relative"
+      className="py-12 px-10 sm:px-28 bg-gradient-to-r from-rose-600 to-rose-700 flex flex-col items-center"
       id="gallery"
       style={style}
     >
-      <div className="container">
-        <div className="heading_container heading_center">
-          <h2>Galerimiz</h2>
-          <p>En güzel anlarınız bizimle birlikte sonsuza kadar saklanır.</p>
-        </div>
-        <div className="row">
-          {list.map(item => (
-            <motion.div
-              key={item.id}
-              layoutId={item.id}
-              onClick={() => {
-                setSelectedId(item.id)
-                setItem(item)
-              }}
-              className="col-sm-6 col-md-4 col-lg-3 mx-auto"
-            >
-              <GalleryItem image={item.image} alt={item.alt} />
-            </motion.div>
-          ))}
-        </div>
-        {isMore && (
-          <div className="see_btn">
-            <Link href="gallery">Daha Fazla</Link>
-          </div>
-        )}
+      <Title
+        title="Galerimiz"
+        subtitle="En güzel anlarınız bizimle birlikte sonsuza kadar saklanır."
+        type="center"
+        className="text-white"
+      />
+      <div className="grid grid-cols-1 sm:grid-cols-4 mx-auto gap-6 py-10">
+        {list.map(item => (
+          <motion.div
+            key={item.id}
+            layoutId={item.id}
+            onClick={() => {
+              setSelectedId(item.id)
+              setItem(item)
+            }}
+          >
+            <GalleryItem image={item.image} alt={item.alt} />
+          </motion.div>
+        ))}
       </div>
+      {isMore && (
+        <div className="link-white text-center sm:text-left">
+          <Link href="gallery">Daha Fazla</Link>
+        </div>
+      )}
       <AnimatePresence>
         {selectedId && item && (
           <>
@@ -77,9 +82,14 @@ function Gallery({ list, isMore, style }: Props) {
               style={{
                 pointerEvents: 'auto',
                 zIndex: 1,
-                willChange: 'opacity'
+                willChange: 'opacity',
+                backgroundColor: 'rgba(0,0,0,0.5)',
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                height: '100vh'
               }}
-              className="bg-dark bg-opacity-75 w-100 h-100 position-fixed top-50 start-50 translate-middle"
+              // className="bg-dark bg-opacity-75 w-100 h-100 position-fixed top-50 start-50 translate-middle"
               onClick={() => {
                 setSelectedId(null)
               }}

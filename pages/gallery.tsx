@@ -1,10 +1,11 @@
 import { NextPage } from 'next'
 import React from 'react'
 import shortid from 'shortid'
-import Gallery from '../components/gallery'
+import Gallery from '../components/home/gallery'
 import Header from '../components/header'
 import Image from 'next/image'
 import Head from 'next/head'
+import MainLayout from '../components/layout/main-layout'
 
 const LIST = [
   {
@@ -35,7 +36,7 @@ const LIST = [
 
 const GalleryPage: NextPage = () => {
   return (
-    <>
+    <MainLayout>
       <Head>
         <title>Mai Organizasyon | Resimlerimiz</title>
         <meta
@@ -43,13 +44,12 @@ const GalleryPage: NextPage = () => {
           content="Mai Organizasyon resim galerisinden istediğiniz organizasyonlar için seçimler yapabilirsiniz."
         />
       </Head>
-      <Header style={{ backgroundColor: '#002c3e' }} />
       <Gallery
         list={LIST}
-        isMore={false}
         style={{ backgroundColor: '#fff !important' }}
+        isMore={false}
       />
-    </>
+    </MainLayout>
   )
 }
 

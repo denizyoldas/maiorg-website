@@ -1,5 +1,3 @@
-import React from 'react'
-import { meta } from '../site.config'
 import { ToastContainer, toast } from 'react-toastify'
 
 function Contact() {
@@ -55,14 +53,14 @@ function Contact() {
             <div className="map_container">
               <div className="map">
                 {/* <div id="googleMap"></div> */}
-                <iframe
+                {/* <iframe
                   src={meta.gmap}
                   width="600"
                   height="450"
                   style={{ border: 0 }}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
+                ></iframe> */}
               </div>
             </div>
           </div>

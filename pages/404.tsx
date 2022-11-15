@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
-import React from 'react'
 import styled from 'styled-components'
+import MainLayout from '../components/layout/main-layout'
 
 const Text = styled.h1`
   font-size: 100px;
@@ -34,20 +34,22 @@ const ErrorPage = () => {
   const router = useRouter()
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        height: '100vh',
-        justifyContent: 'center',
-        alignItems: 'center',
-        textAlign: 'center'
-      }}
-    >
-      <Text>404</Text>
-      <SubText>Aradığınız sayfa bulunamadı.</SubText>
-      <Button onClick={() => router.push('/')}>Anasayfa</Button>
-    </div>
+    <MainLayout>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          height: '100vh',
+          justifyContent: 'center',
+          alignItems: 'center',
+          textAlign: 'center'
+        }}
+      >
+        <Text>404</Text>
+        <SubText>Aradığınız sayfa bulunamadı.</SubText>
+        <Button onClick={() => router.push('/')}>Anasayfa</Button>
+      </div>
+    </MainLayout>
   )
 }
 

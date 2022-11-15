@@ -1,4 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.css'
+// import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/globals.css'
 import 'react-toastify/dist/ReactToastify.css'
 import 'swiper/css'

@@ -1,19 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import shortid from 'shortid'
-import AboutUs from '../components/about-us'
-import Client from '../components/client'
-import Contact from '../components/contact'
-import Footer from '../components/footer'
-import Gallery from '../components/gallery'
-import GoToTop from '../components/go-to-top'
-import Header from '../components/header'
-import Info from '../components/info'
-import Service from '../components/service'
-import Slider from '../components/slider'
-import WhatsappButton from '../components/whatsapp'
-import { meta } from '../site.config'
+import AboutUs from '../components/home/about-us'
+import Client from '../components/home/client'
+import Gallery from '../components/home/gallery'
+import Hero from '../components/home/hero'
+import MainLayout from '../components/layout/main-layout'
+import Service from '../components/home/service'
 
 const LIST = [
   {
@@ -56,29 +49,16 @@ const Home: NextPage = () => {
           hedefliyoruz."
         />
       </Head>
-      <div className="hero_area">
-        <div className="hero_bg_box">
-          {/* <img src="images/hero-bg.jpg" /> */}
-          <Image
-            src="/images/hero-bg.webp"
-            alt="evli çift fotografı"
-            layout="fill"
-          />
-        </div>
-        <Header />
-        <Slider />
-      </div>
 
-      <AboutUs />
-      <Service />
-      <Gallery list={LIST} isMore />
-      <Contact />
-      <Client />
-      <Info />
-      <Footer />
-
-      <GoToTop />
-      {meta.whatsappShow && <WhatsappButton />}
+      <MainLayout>
+        <Hero />
+        <AboutUs />
+        <Service />
+        <Gallery list={LIST} />
+        {/* <Contact /> */}
+        <Client />
+        {/* <Info /> */}
+      </MainLayout>
     </>
   )
 }
