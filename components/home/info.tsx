@@ -5,30 +5,31 @@ import { BsFillEnvelopeFill } from 'react-icons/bs'
 
 function Info() {
   return (
-    <section className="info_section ">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-12">
-            <div className="info_contact_container ">
-              <h5>İletişim için</h5>
-              <div className="info_contact">
-                <div className="contact_link_box">
-                  <a href="#">
-                    <FaMapMarkerAlt />
-                    <p>{meta.contact.address}</p>
-                  </a>
-                  <a href={`tel:${meta.contact.phone}`}>
-                    <AiFillPhone />
-                    <p>{meta.contact.phone}</p>
-                  </a>
-                  <a href={`mailto:${meta.contact.email}`}>
-                    <BsFillEnvelopeFill />
-                    <p>{meta.contact.email}</p>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+    <section id="info" className="pt-12 sm:pt-24 sm:px-24">
+      <div className="grid grid-cols-1 sm:grid-cols-3 text-center sm:text-left">
+        <div className="centered flex-col">
+          <h3 className="flex items-center gap-2 text-2xl font-bold mb-4">
+            <FaMapMarkerAlt />
+            Adres
+          </h3>
+          <p>{meta.contact.address}</p>
+        </div>
+        <div className="centered flex-col">
+          <h3 className="flex items-center gap-2 text-2xl font-bold mb-4">
+            <AiFillPhone /> Telefon
+          </h3>
+          <a href={`tel:${meta.contact.phone}`}>
+            <p>{meta.contact.phone}</p>
+          </a>
+        </div>
+        <div className="centered flex-col">
+          <h3 className="flex items-center gap-2 text-2xl font-bold mb-4">
+            <BsFillEnvelopeFill />
+            Mail
+          </h3>
+          <a href={`mailto:${meta.contact.email}`}>
+            <p>{meta.contact.email}</p>
+          </a>
         </div>
       </div>
     </section>

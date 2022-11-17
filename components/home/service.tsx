@@ -46,9 +46,13 @@ const SERVICES = [
   }
 ]
 
-function Service() {
+interface Props {
+  showMore?: boolean
+}
+
+function Service({ showMore = true }: Props) {
   return (
-    <section className="pb-24" id="services">
+    <section className="py-24" id="services">
       <div className="flex items-center flex-col">
         <Title
           type="center"
@@ -72,9 +76,11 @@ function Service() {
             </div>
           ))}
         </div>
-        <div className="btn-box">
-          <a className="link">Daha Fazlası</a>
-        </div>
+        {showMore && (
+          <div className="btn-box">
+            <a className="link">Daha Fazlası</a>
+          </div>
+        )}
       </div>
     </section>
   )

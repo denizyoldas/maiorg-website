@@ -15,7 +15,8 @@ module.exports = {
         footer: '#00142f'
       },
       backgroundImage: {
-        'hero-pattern': "url('/images/hero-weeding-1.jpg')"
+        'hero-pattern': "url('/images/hero-weeding-1.jpg')",
+        'thumb-pattern': "url('/images/thumbnail.jpg')"
       },
       fontFamily: {
         mono: [...fontFamily.mono],

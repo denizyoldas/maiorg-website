@@ -6,6 +6,7 @@ import Header from '../components/header'
 import Image from 'next/image'
 import Head from 'next/head'
 import MainLayout from '../components/layout/main-layout'
+import PageThumbnail from '../components/UI/page-thumbnail'
 
 const LIST = [
   {
@@ -31,6 +32,24 @@ const LIST = [
     title: 'Title 4',
     image: 'images/g4.webp',
     alt: 'Nişan organizasyonu'
+  },
+  {
+    id: shortid.generate(),
+    title: 'Title 5',
+    image: 'images/g5.jpg',
+    alt: 'Nişan organizasyonu'
+  },
+  {
+    id: shortid.generate(),
+    title: 'Title 5',
+    image: 'images/a1.webp',
+    alt: 'Nişan organizasyonu'
+  },
+  {
+    id: shortid.generate(),
+    title: 'Title 5',
+    image: 'images/a2.jpg',
+    alt: 'Nişan organizasyonu'
   }
 ]
 
@@ -44,6 +63,7 @@ const GalleryPage: NextPage = () => {
           content="Mai Organizasyon resim galerisinden istediğiniz organizasyonlar için seçimler yapabilirsiniz."
         />
       </Head>
+      <PageThumbnail title="Resimlerimiz" />
       <Gallery
         list={LIST}
         style={{ backgroundColor: '#fff !important' }}

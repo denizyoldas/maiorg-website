@@ -17,7 +17,7 @@ const nextConfig = withMDX({
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['images.unsplash.com', 'img.icons8.com']
+    domains: ['images.unsplash.com', 'img.icons8.com', 'i.pravatar.cc']
   },
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx']
   // async rewrites() {

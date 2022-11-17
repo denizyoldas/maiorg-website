@@ -5,6 +5,7 @@ import GalleryItem from './gallery-item'
 import disableScroll from 'disable-scroll'
 import styled from 'styled-components'
 import Title from '../UI/title'
+import cx from 'classnames'
 
 interface Props {
   list: any[]
@@ -28,7 +29,7 @@ const CardBody = styled.div`
   justify-content: center;
 `
 
-function Gallery({ list, style, isMore = true }: Props) {
+function Gallery({ list, isMore = true }: Props) {
   const [selectedId, setSelectedId] = useState(null)
   const [item, setItem] = useState<{ image: string; alt: string }>()
 
@@ -42,16 +43,20 @@ function Gallery({ list, style, isMore = true }: Props) {
 
   return (
     <section
-      className="py-12 px-10 sm:px-28 bg-gradient-to-r from-rose-600 to-rose-700 flex flex-col items-center"
+      className={cx(
+        'py-12 px-10 sm:px-28 flex flex-col items-center',
+        isMore && 'bg-gradient-to-r from-rose-600 to-rose-700 '
+      )}
       id="gallery"
-      style={style}
     >
-      <Title
-        title="Galerimiz"
-        subtitle="En güzel anlarınız bizimle birlikte sonsuza kadar saklanır."
-        type="center"
-        className="text-white"
-      />
+      {isMore && (
+        <Title
+          title="Galerimiz"
+          subtitle="En güzel anlarınız bizimle birlikte sonsuza kadar saklanır."
+          type="center"
+          className={cx(isMore && 'text-white')}
+        />
+      )}
       <div className="grid grid-cols-1 sm:grid-cols-4 mx-auto gap-6 py-10">
         {list.map(item => (
           <motion.div

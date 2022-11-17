@@ -1,4 +1,7 @@
 import { ToastContainer, toast } from 'react-toastify'
+import { meta } from '../../site.config'
+import Input from '../UI/input'
+import Title from '../UI/title'
 
 function Contact() {
   const submitHandler = (event: any) => {
@@ -17,53 +20,32 @@ function Contact() {
   }
 
   return (
-    <section id="contact" className="contact_section layout_padding">
-      <div className="container">
-        <div className="heading_container">
-          <h2>İletişim</h2>
+    <section id="contact" className="py-12 sm:p-24">
+      <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-10">
+        <div>
+          <form
+            action=""
+            onSubmit={submitHandler}
+            className="grid grid-cols-1 gap-4"
+          >
+            <Input type="text" placeholder="Ad Soyad" name="name" />
+            <Input type="text" placeholder="Telefon" name="phone" />
+            <Input type="email" placeholder="Email" name="email" />
+            <Input type="textarea" placeholder="Mesajınız" name="message" />
+            <div className="link text-center">
+              <button type="submit">Gönder</button>
+            </div>
+          </form>
         </div>
-        <div className="row">
-          <div className="col-md-6">
-            <div className="form_container contact-form">
-              <form action="" onSubmit={submitHandler}>
-                <div>
-                  <input type="text" placeholder="Ad Soyad" name="name" />
-                </div>
-                <div>
-                  <input type="text" placeholder="Telefon" name="phone" />
-                </div>
-                <div>
-                  <input type="email" placeholder="Email" name="email" />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    className="message-box"
-                    placeholder="Mesajınız"
-                    name="message"
-                  />
-                </div>
-                <div className="btn_box">
-                  <button type="submit">Gönder</button>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="map_container">
-              <div className="map">
-                {/* <div id="googleMap"></div> */}
-                {/* <iframe
-                  src={meta.gmap}
-                  width="600"
-                  height="450"
-                  style={{ border: 0 }}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe> */}
-              </div>
-            </div>
-          </div>
+        <div className="map">
+          <iframe
+            src={meta.gmap}
+            width="600"
+            height="450"
+            style={{ border: 0 }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
       <ToastContainer />

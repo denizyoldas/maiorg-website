@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { useState } from 'react'
+import cx from 'classnames'
 
 const MENU = {
   Anasayfa: '/',
   Hakkımızda: '/about',
   Hizmetlerimiz: '/services',
   Galeri: '/gallery',
+  Blog: '/blog',
   İletişim: '/contact'
 }
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { pathname } = useRouter()
 
   return (
     <header className="w-full backdrop-blur-md shadow-sm bg-white bg-opacity-20 top-0 z-50 p-10">
@@ -20,7 +24,13 @@ function Header() {
         </a>
         <ul className="gap-4 hidden sm:flex">
           {Object.entries(MENU).map(([title, href]) => (
-            <li key={title} className="hover:underline">
+            <li
+              key={title}
+              className={cx(
+                'hover:underline',
+                pathname === href && 'text-rose-600'
+              )}
+            >
               <Link href={href}>{title}</Link>
             </li>
           ))}
@@ -31,16 +41,3 @@ function Header() {
 }
 
 export default Header
-
-{
-  /* <button
-            className="navbar-toggler"
-            type="button"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className=""></span>
-          </button> */
-}
