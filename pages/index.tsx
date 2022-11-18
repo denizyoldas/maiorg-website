@@ -1,19 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import shortid from 'shortid'
-import AboutUs from '../components/about-us'
-import Client from '../components/client'
-import Contact from '../components/contact'
-import Footer from '../components/footer'
-import Gallery from '../components/gallery'
-import GoToTop from '../components/go-to-top'
-import Header from '../components/header'
-import Info from '../components/info'
-import Service from '../components/service'
-import Slider from '../components/slider'
-import WhatsappButton from '../components/whatsapp'
-import { meta } from '../site.config'
+import AboutUs from '../components/home/about-us'
+import Client from '../components/home/client'
+import Gallery from '../components/home/gallery'
+import Hero from '../components/home/hero'
+import MainLayout from '../components/layout/main-layout'
+import Service from '../components/home/service'
 
 const LIST = [
   {
@@ -44,42 +37,21 @@ const LIST = [
 
 const Home: NextPage = () => {
   return (
-    <>
+    <MainLayout>
       <Head>
         <title>Mai Organizasyon | Hayallerinize dokunun</title>
         <meta
           name="description"
-          content="Mai Organizasyon olarak hayatınızın her anında yanınızda olmak
-          ve bu anları mükemmel bir şekilde doldurmak bizim en büyük
-          ilkemizidir. Sizin hayallerinizi gerçeğe dönüştürmek için her
-          imkanı ve fırsatı değerlendirerek olanakları sonsuza indirgemeyi
-          hedefliyoruz."
+          content="Mai Organizasyon İstanbul'un Tuzla ilçesinde düğün, nişan, doğum günü, baby show, kurumsal organizasyonlarınız için hizmet vermektedir."
         />
       </Head>
-      <div className="hero_area">
-        <div className="hero_bg_box">
-          {/* <img src="images/hero-bg.jpg" /> */}
-          <Image
-            src="/images/hero-bg.webp"
-            alt="evli çift fotografı"
-            layout="fill"
-          />
-        </div>
-        <Header />
-        <Slider />
-      </div>
 
+      <Hero />
       <AboutUs />
       <Service />
-      <Gallery list={LIST} isMore />
-      <Contact />
+      <Gallery list={LIST} />
       <Client />
-      <Info />
-      <Footer />
-
-      <GoToTop />
-      {meta.whatsappShow && <WhatsappButton />}
-    </>
+    </MainLayout>
   )
 }
 

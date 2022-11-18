@@ -1,9 +1,9 @@
-import 'bootstrap/dist/css/bootstrap.css'
 import '../styles/globals.css'
 import 'react-toastify/dist/ReactToastify.css'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import { AnimateSharedLayout } from 'framer-motion'
+import NextNProgress from 'nextjs-progressbar'
 
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
@@ -11,6 +11,8 @@ import Head from 'next/head'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
+      <NextNProgress color="#e11d48" />
+
       <Head>
         <meta name="author" content="Deniz Aksu" />
         <meta name="robots" content="index, follow" />

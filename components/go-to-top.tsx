@@ -6,9 +6,8 @@ const Top = styled.a<{ show: boolean }>`
   display: ${props => (props.show ? 'block' : 'none')};
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 20px;
   z-index: 999;
-  background: #0081bc;
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
@@ -46,7 +45,7 @@ function GoToTop() {
   }
 
   return (
-    <Top show={show} onClick={goToTopHandle}>
+    <Top show={show} onClick={goToTopHandle} className="bg-rose-700">
       <AiOutlineArrowUp size={20} fontWeight="bold" />
     </Top>
   )
