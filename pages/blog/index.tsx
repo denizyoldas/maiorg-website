@@ -26,19 +26,19 @@ const BlogPage = () => {
       </Head>
       <PageThumbnail title="Blog" />
 
-      <section className="p-12 sm:p-24 mb-72">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <section className="mb-72 p-12 sm:p-24">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
           {POSTS.map(post => (
             <div key={post.slug}>
-              <div className="h-48 w-full bg-cover bg-center rounded-t-lg overflow-hidden">
+              <div className="h-48 w-full overflow-hidden rounded-t-lg bg-cover bg-center">
                 <img
                   className="h-full w-full object-cover object-center"
                   src={post.image}
                   alt={post.title}
                 />
               </div>
-              <div className="bg-gray-300 p-4 rounded-b-lg">
-                <h3 className="text-lg text-gray-700 font-medium">
+              <div className="rounded-b-lg bg-gray-300 p-4">
+                <h3 className="text-lg font-medium text-gray-700">
                   {post.title}
                 </h3>
                 <p className="mt-1 text-sm text-gray-500">{post.date}</p>
@@ -46,7 +46,7 @@ const BlogPage = () => {
 
                 <a
                   href={`/blog/${post.slug}`}
-                  className="block text-blue-500 text-sm font-medium mt-2"
+                  className="mt-2 block text-sm font-medium text-blue-500"
                 >
                   Devamını Oku →
                 </a>

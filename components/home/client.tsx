@@ -40,7 +40,7 @@ const testimonials = [
 
 function Client() {
   return (
-    <section className="px-8 py-24 sm:p-24 mx-auto">
+    <section className="mx-auto px-8 py-24 sm:p-24">
       <Title title="Müşteri Yorumları" type="center" />
       <div className="pt-10">
         <Swiper
@@ -73,7 +73,7 @@ function Client() {
         >
           {testimonials.map((item, index) => (
             <SwiperSlide key={item.id} className="h-full">
-              <div className="px-4 py-6 rounded-lg relative flex flex-col items-center min-h-36 w-full bg-[#222] text-white gap-4 text-center">
+              <div className="min-h-36 relative flex w-full flex-col items-center gap-4 rounded-lg bg-[#222] px-4 py-6 text-center text-white">
                 <h5>{item.name}</h5>
                 <p>{item.quote}</p>
               </div>

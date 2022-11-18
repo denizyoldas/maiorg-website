@@ -14,7 +14,7 @@ function WhatsappButton() {
         <Image
           width={60}
           height={60}
-          className="hover:scale-110 transform transition duration-300 ease-in-out"
+          className="transform transition duration-300 ease-in-out hover:scale-110"
           src="https://img.icons8.com/color/80/000000/whatsapp.png"
           alt="Whatsapp"
         />

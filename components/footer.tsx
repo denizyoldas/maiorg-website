@@ -4,7 +4,7 @@ import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 function Footer() {
   const year = new Date().getFullYear()
   return (
-    <section className="bg-footer px-24 py-12 flex items-center justify-between flex-col md:flex-row text-center sm:text-left gap-10 sm:gap-0">
+    <section className="flex flex-col items-center justify-between gap-10 bg-footer px-24 py-12 text-center sm:gap-0 sm:text-left md:flex-row">
       <p className="text-white">
         &copy; <span>{year}</span> All Rights Reserved By{' '}
         <a

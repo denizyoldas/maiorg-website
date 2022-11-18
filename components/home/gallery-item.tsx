@@ -11,13 +11,13 @@ interface Props {
 
 function GalleryItem({ image, alt, type = 'grid' }: Props) {
   return (
-    <div className="border-2 border-white relative group">
+    <div className="group relative border-2 border-white">
       <img src={image} alt={alt} />
       {type === 'grid' && (
-        <div className="absolute w-full h-full group-hover:flex hidden top-0 bg-slate-300/50 transition duration-300 items-center justify-center cursor-pointer">
+        <div className="absolute top-0 hidden h-full w-full cursor-pointer items-center justify-center bg-slate-300/50 transition duration-300 group-hover:flex">
           <a
             data-toggle="lightbox"
-            className="bg-white rounded-full w-12 h-12 flex items-center justify-center"
+            className="flex h-12 w-12 items-center justify-center rounded-full bg-white"
           >
             <BsImage size={24} />
           </a>

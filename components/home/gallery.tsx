@@ -44,7 +44,7 @@ function Gallery({ list, isMore = true }: Props) {
   return (
     <section
       className={cx(
-        'py-12 px-10 sm:px-28 flex flex-col items-center',
+        'flex flex-col items-center py-12 px-10 sm:px-28',
         isMore && 'bg-gradient-to-r from-rose-600 to-rose-700 '
       )}
       id="gallery"
@@ -57,7 +57,7 @@ function Gallery({ list, isMore = true }: Props) {
           className={cx(isMore && 'text-white')}
         />
       )}
-      <div className="grid grid-cols-1 sm:grid-cols-4 mx-auto gap-6 py-10">
+      <div className="mx-auto grid grid-cols-1 gap-6 py-10 sm:grid-cols-4">
         {list.map(item => (
           <motion.div
             key={item.id}

@@ -25,7 +25,7 @@ const Contact = () => {
 
       <section className="py-12 px-24">
         <Title title="Sosyal Medya" subtitle="Bizi takip edin" />
-        <div className="w-1/4 grid grid-cols-4 gap-4 pt-12">
+        <div className="grid w-1/4 grid-cols-4 gap-4 pt-12">
           <a
             href={'https://facebook.com/' + meta.social.facebook}
             rel="nofollow"

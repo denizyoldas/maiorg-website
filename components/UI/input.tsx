@@ -10,7 +10,7 @@ const Input = ({ type, placeholder, name }: Props) => {
   if (type === 'textarea') {
     return (
       <textarea
-        className="w-full p-4 text-sm border border-gray-300 rounded-md"
+        className="w-full rounded-md border border-gray-300 p-4 text-sm"
         placeholder={placeholder}
         name={name}
       ></textarea>
@@ -22,7 +22,7 @@ const Input = ({ type, placeholder, name }: Props) => {
       type={type}
       placeholder={placeholder}
       name={name}
-      className="w-full p-4 rounded-md border-gray-300 outline-none"
+      className="w-full rounded-md border-gray-300 p-4 outline-none"
     />
   )
 }

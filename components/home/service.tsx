@@ -53,7 +53,7 @@ interface Props {
 function Service({ showMore = true }: Props) {
   return (
     <section className="py-24" id="services">
-      <div className="flex items-center flex-col">
+      <div className="flex flex-col items-center">
         <Title
           type="center"
           title="Hizmetlerimiz"
@@ -63,16 +63,16 @@ function Service({ showMore = true }: Props) {
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 sm:px-24">
           {SERVICES.map(service => (
-            <div key={service.id} className="flex items-center flex-col p-4">
-              <div className="bg-rose-600 p-5 rounded-md">
+            <div key={service.id} className="flex flex-col items-center p-4">
+              <div className="rounded-md bg-rose-600 p-5">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-16 h16"
+                  className="h16 w-16"
                 />
               </div>
-              <h3 className="text-2xl font-bold mt-4">{service.title}</h3>
-              <p className="text-center mt-4">{service.subtitle}</p>
+              <h3 className="mt-4 text-2xl font-bold">{service.title}</h3>
+              <p className="mt-4 text-center">{service.subtitle}</p>
             </div>
           ))}
         </div>

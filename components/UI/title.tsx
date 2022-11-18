@@ -17,10 +17,10 @@ const Title = ({ title, subtitle, className, type = 'left' }: Props) => {
         className
       )}
     >
-      <h2 className="section-title relative text-3xl font-bold text-center uppercase pb-1">
+      <h2 className="section-title relative pb-1 text-center text-3xl font-bold uppercase">
         {title}
       </h2>
-      {subtitle && <p className="text-center mt-2">{subtitle}</p>}
+      {subtitle && <p className="mt-2 text-center">{subtitle}</p>}
     </div>
   )
 }

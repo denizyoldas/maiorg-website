@@ -17,12 +17,12 @@ function Header() {
   const { pathname } = useRouter()
 
   return (
-    <header className="w-full backdrop-blur-md shadow-sm bg-white bg-opacity-20 top-0 z-50 p-10">
+    <header className="top-0 z-50 w-full bg-white bg-opacity-20 p-10 shadow-sm backdrop-blur-md">
       <nav className="flex items-center justify-center sm:justify-between">
         <a href="#">
           <h1 className="text-2xl font-bold text-rose-600">Mai Organizasyon</h1>
         </a>
-        <ul className="gap-4 hidden sm:flex">
+        <ul className="hidden gap-4 sm:flex">
           {Object.entries(MENU).map(([title, href]) => (
             <li
               key={title}

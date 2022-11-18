@@ -5,17 +5,17 @@ import { BsFillEnvelopeFill } from 'react-icons/bs'
 
 function Info() {
   return (
-    <section id="info" className="pt-12 sm:pt-24 sm:px-24">
-      <div className="grid grid-cols-1 sm:grid-cols-3 text-center sm:text-left">
+    <section id="info" className="pt-12 sm:px-24 sm:pt-24">
+      <div className="grid grid-cols-1 text-center sm:grid-cols-3 sm:text-left">
         <div className="centered flex-col">
-          <h3 className="flex items-center gap-2 text-2xl font-bold mb-4">
+          <h3 className="mb-4 flex items-center gap-2 text-2xl font-bold">
             <FaMapMarkerAlt />
             Adres
           </h3>
           <p>{meta.contact.address}</p>
         </div>
         <div className="centered flex-col">
-          <h3 className="flex items-center gap-2 text-2xl font-bold mb-4">
+          <h3 className="mb-4 flex items-center gap-2 text-2xl font-bold">
             <AiFillPhone /> Telefon
           </h3>
           <a href={`tel:${meta.contact.phone}`}>
@@ -23,7 +23,7 @@ function Info() {
           </a>
         </div>
         <div className="centered flex-col">
-          <h3 className="flex items-center gap-2 text-2xl font-bold mb-4">
+          <h3 className="mb-4 flex items-center gap-2 text-2xl font-bold">
             <BsFillEnvelopeFill />
             Mail
           </h3>
