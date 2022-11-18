@@ -5,7 +5,6 @@ import NextDocument, {
   NextScript,
   DocumentContext
 } from 'next/document'
-import Script from 'next/script'
 import { meta } from '../site.config'
 
 export default class MyDocument extends NextDocument {

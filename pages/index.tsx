@@ -37,29 +37,21 @@ const LIST = [
 
 const Home: NextPage = () => {
   return (
-    <>
+    <MainLayout>
       <Head>
         <title>Mai Organizasyon | Hayallerinize dokunun</title>
         <meta
           name="description"
-          content="Mai Organizasyon olarak hayatınızın her anında yanınızda olmak
-          ve bu anları mükemmel bir şekilde doldurmak bizim en büyük
-          ilkemizidir. Sizin hayallerinizi gerçeğe dönüştürmek için her
-          imkanı ve fırsatı değerlendirerek olanakları sonsuza indirgemeyi
-          hedefliyoruz."
+          content="Mai Organizasyon İstanbul'un Tuzla ilçesinde düğün, nişan, doğum günü, baby show, kurumsal organizasyonlarınız için hizmet vermektedir."
         />
       </Head>
 
-      <MainLayout>
-        <Hero />
-        <AboutUs />
-        <Service />
-        <Gallery list={LIST} />
-        {/* <Contact /> */}
-        <Client />
-        {/* <Info /> */}
-      </MainLayout>
-    </>
+      <Hero />
+      <AboutUs />
+      <Service />
+      <Gallery list={LIST} />
+      <Client />
+    </MainLayout>
   )
 }
 

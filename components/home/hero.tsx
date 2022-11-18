@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Hero = () => {
   return (
     <section className="relative bg-hero-pattern bg-cover bg-no-repeat">

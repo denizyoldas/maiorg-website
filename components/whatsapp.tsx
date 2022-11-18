@@ -2,14 +2,7 @@ import Image from 'next/image'
 
 function WhatsappButton() {
   return (
-    <div
-      style={{
-        position: 'fixed',
-        right: '15px',
-        bottom: '15px',
-        zIndex: '100'
-      }}
-    >
+    <div className="fixed right-4 bottom-4 z-40">
       <a target="_blank" rel="noreferrer" href="https://wa.me/+905343489348">
         <Image
           width={60}
@@ -18,8 +11,6 @@ function WhatsappButton() {
           src="https://img.icons8.com/color/80/000000/whatsapp.png"
           alt="Whatsapp"
         />
-        {/* <img src="svg/whatsapp.svg" alt="" /> */}
-        {/* <FaWhatsappSquare size={50} /> */}
       </a>
     </div>
   )

@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import React from 'react'
 import Team from '../components/about/team'
 import AboutUs from '../components/home/about-us'
 import MainLayout from '../components/layout/main-layout'

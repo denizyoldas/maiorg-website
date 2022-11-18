@@ -1,5 +1,4 @@
 import { BsImage } from 'react-icons/bs'
-import cx from 'classnames'
 
 interface Props {
   id?: string

@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import React from 'react'
 import Service from '../components/home/service'
 import MainLayout from '../components/layout/main-layout'
 import PageThumbnail from '../components/UI/page-thumbnail'

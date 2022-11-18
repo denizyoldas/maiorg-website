@@ -1,7 +1,5 @@
-import React from 'react'
 import shortid from 'shortid'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import cx from 'classnames'
 import Title from '../UI/title'
 import { Autoplay } from 'swiper'
 

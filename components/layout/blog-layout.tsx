@@ -17,7 +17,7 @@ const BlogLayout = ({ children }: Props) => {
       <main className="flex justify-between p-24">
         <div className="prose max-w-none">{children}</div>
 
-        <div className="pt-32 pl-10">
+        {/* <div className="pt-32 pl-10">
           Diğer Yazılar
           <ul>
             <li>
@@ -29,7 +29,7 @@ const BlogLayout = ({ children }: Props) => {
               </a>
             </li>
           </ul>
-        </div>
+        </div> */}
       </main>
 
       <Footer />

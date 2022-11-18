@@ -15,7 +15,7 @@ const Contact = () => {
 
         <meta
           name="description"
-          content="Mai Organizasyon olarak, siz değerli müşterilerimizin her türlü organizasyon ihtiyacını karşılamak için çalışıyoruz. Sizlerin mutlu olması bizim için en büyük ödül."
+          content="Mai Organizasyon ile iletişime geçmek için aşağıdaki formu doldurabilir veya sosyal medya hesaplarımızdan bize ulaşabilirsiniz."
         />
       </Head>
 
@@ -23,9 +23,9 @@ const Contact = () => {
       <Info />
       <ContactForm />
 
-      <section className="py-12 px-24">
+      <section className="py-12 px-10 sm:px-24">
         <Title title="Sosyal Medya" subtitle="Bizi takip edin" />
-        <div className="grid w-1/4 grid-cols-4 gap-4 pt-12">
+        <div className="grid grid-cols-2 gap-4 pt-12 sm:w-1/4 sm:grid-cols-4">
           <a
             href={'https://facebook.com/' + meta.social.facebook}
             rel="nofollow"
