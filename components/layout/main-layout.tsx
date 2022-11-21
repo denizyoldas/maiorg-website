@@ -14,7 +14,7 @@ const MainLayout = ({ children }: Props) => {
   return (
     <main>
       <Header />
-      {/* <MobileMenu /> */}
+      <MobileMenu />
 
       {children}
 

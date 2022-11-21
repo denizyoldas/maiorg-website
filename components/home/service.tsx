@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import shortid from 'shortid'
 import Title from '../UI/title'
 
@@ -78,7 +79,9 @@ function Service({ showMore = true }: Props) {
         </div>
         {showMore && (
           <div className="btn-box">
-            <a className="link">Daha Fazlası</a>
+            <Link href="/services" className="link">
+              Daha Fazlası
+            </Link>
           </div>
         )}
       </div>

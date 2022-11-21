@@ -1,7 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from 'next/link'
 import Title from '../UI/title'
 
-function AboutUs() {
+interface Props {
+  ShowIsMore?: boolean
+}
+
+function AboutUs({ ShowIsMore = true }: Props) {
   return (
     <section className="items-center p-4 py-24 sm:px-24" id="about">
       <div className="grid grid-cols-1 sm:grid-cols-2">
@@ -13,9 +18,13 @@ function AboutUs() {
             Sizin hayallerinizi gerçeğe dönüştürmek için her imkanı ve fırsatı
             değerlendirerek olanakları sonsuza indirgemeyi hedefliyoruz.
           </p>
-          <div className="text-center">
-            <a className="link">Daha Fazla</a>
-          </div>
+          {ShowIsMore && (
+            <div className="text-center">
+              <Link href="/about" className="link">
+                Daha Fazla
+              </Link>
+            </div>
+          )}
         </div>
         <div className="grid grid-cols-2 gap-4 pt-10 sm:pt-0">
           <div className="pt-10">
