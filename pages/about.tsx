@@ -17,7 +17,7 @@ const AboutPage = () => {
       </Head>
 
       <PageThumbnail title="Hakkımızda" />
-      <AboutUs />
+      <AboutUs ShowIsMore={false} />
       <Team />
     </MainLayout>
   )

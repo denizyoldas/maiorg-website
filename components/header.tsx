@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
 import cx from 'classnames'
 
 const MENU = {
@@ -13,7 +12,6 @@ const MENU = {
 }
 
 function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { pathname } = useRouter()
 
   return (

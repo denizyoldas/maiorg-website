@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from '../footer'
 import Header from '../header'
+import MobileMenu from '../mobile-menu'
 import BlogThumbnail from '../UI/blog-thumbnail'
 
 interface Props {
@@ -11,10 +12,11 @@ const BlogLayout = ({ children }: Props) => {
   return (
     <>
       <Header />
+      <MobileMenu />
 
       <BlogThumbnail />
 
-      <main className="flex justify-between p-24">
+      <main className="flex justify-between p-12 sm:p-24">
         <div className="prose max-w-none">{children}</div>
 
         {/* <div className="pt-32 pl-10">

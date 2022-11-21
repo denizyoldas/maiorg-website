@@ -1,4 +1,11 @@
+import Link from 'next/link'
+
 const Hero = () => {
+  const goToId = (id: string) => {
+    const aboutSection = document.querySelector(`#${id}`)
+    aboutSection?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <section className="relative bg-hero-pattern bg-cover bg-no-repeat">
       <div className="absolute inset-0 bg-white/75 sm:bg-transparent sm:bg-gradient-to-r sm:from-white/95 sm:to-white/25"></div>
@@ -17,19 +24,19 @@ const Hero = () => {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4 text-center">
-            <a
-              href="#"
+            <button
+              onClick={() => goToId('services')}
               className="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
             >
               Hizmetlerimiz
-            </a>
+            </button>
 
-            <a
-              href="#"
+            <button
+              onClick={() => goToId('about')}
               className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow hover:bg-gray-100 hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
             >
               Daha Fazla
-            </a>
+            </button>
           </div>
         </div>
       </div>
