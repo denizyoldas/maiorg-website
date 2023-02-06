@@ -50,7 +50,7 @@ const LIST = [
   }
 ]
 
-const GalleryPage: NextPage = () => {
+const GalleryPage: NextPage<{ galleryList: any[] }> = ({ galleryList }) => {
   return (
     <MainLayout>
       <Head>
@@ -62,12 +62,20 @@ const GalleryPage: NextPage = () => {
       </Head>
       <PageThumbnail title="Resimlerimiz" />
       <Gallery
-        list={LIST}
+        list={galleryList}
         style={{ backgroundColor: '#fff !important' }}
         isMore={false}
       />
     </MainLayout>
   )
+}
+
+export function getStaticProps() {
+  return {
+    props: {
+      galleryList: LIST
+    }
+  }
 }
 
 export default GalleryPage

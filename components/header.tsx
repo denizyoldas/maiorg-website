@@ -17,9 +17,9 @@ function Header() {
   return (
     <header className="top-0 z-50 w-full bg-white bg-opacity-20 p-10 shadow-sm backdrop-blur-md">
       <nav className="relative flex items-center justify-center sm:justify-between">
-        <a href="#">
+        <Link href="/">
           <h1 className="text-2xl font-bold text-rose-600">Mai Organizasyon</h1>
-        </a>
+        </Link>
         <ul className="hidden gap-4 sm:flex">
           {Object.entries(MENU).map(([title, href]) => (
             <li

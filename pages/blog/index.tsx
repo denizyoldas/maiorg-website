@@ -7,8 +7,25 @@ const POSTS = [
     title: 'Tuzla Mai Organizasyon',
     date: '2022-11-01',
     description: `Tuzla'da Mai Organizasyon olarak Canan hanımın kontrolünde büyümekte olan bir organizasyon firmasıdır. Bir çok çiftin güzel günlerinde yanlarında bulunan ve bu günleri güzelleştiren Mai Organizasyon olarak ...`,
-    image: 'https://picsum.photos/seed/picsum/200/300',
+    image: 'https://picsum.photos/seed/picsum/200/300?key=1',
     slug: 'tuzla-organizasyon'
+  },
+  {
+    title:
+      'Düğün Planlamasında Organizasyon Yöneticisi Açısından Dikkat Edilmesi Gereken 6 Şey',
+    date: '2022-11-01',
+    description:
+      'Düğünler sadece çiftler için özel ve anısı kalıcı günler değildir, aynı zamanda düğün planlamacıları için de zor ve meşakkatli bir iş olabilirler.',
+    image: 'https://picsum.photos/seed/picsum/200/300?key=2',
+    slug: 'dugun-planlamasinda-organizasyon-yoneticisi-acisindan-dikkat-edilmesi-gereken-5-sey'
+  },
+  {
+    title: 'Evlilik Organizasyonu Nasıl Yapılır?',
+    date: '2023-01-12',
+    description: `Evlilik, hayatımızın en önemli ve anısı kalıcı olaylarından biridir. Bu nedenle,
+    evlilik organizasyonlarına doğru bir şekilde odaklanmak önemlidir.`,
+    image: 'https://picsum.photos/seed/picsum/200/300?key=3',
+    slug: 'evlilik-organizasyonu-nasil-yapilir'
   }
 ]
 
