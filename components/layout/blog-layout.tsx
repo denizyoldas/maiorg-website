@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 import React from 'react'
 import Footer from '../footer'
 import Header from '../header'
-import MobileMenu from '../mobile-menu'
 import BlogThumbnail from '../UI/blog-thumbnail'
 import cx from 'classnames'
 
@@ -55,7 +54,6 @@ const BlogLayout = ({ children, meta }: Props) => {
         <meta name="description" content={meta.description} />
       </Head>
       <Header />
-      <MobileMenu />
 
       <BlogThumbnail />
 

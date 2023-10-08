@@ -1,3 +1,5 @@
+'use client'
+
 import shortid from 'shortid'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Title from '../UI/title'

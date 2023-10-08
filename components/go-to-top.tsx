@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect, useState } from 'react'
 import { AiOutlineArrowUp } from 'react-icons/ai'
 import styled from 'styled-components'
