@@ -3,7 +3,7 @@ import Title from '../UI/title'
 const Team = ({ list }: { list: any[] }) => {
   return (
     <div className="flex w-full flex-col items-center justify-center py-10">
-      <Title title="Takımımız" />
+      <Title title="Ekibimiz" />
       <div className="grid grid-cols-1 gap-10 p-12 sm:grid-cols-2 md:grid-cols-4">
         {list.map((member, index) => (
           <div

@@ -1,3 +1,5 @@
+'use client'
+
 import { ToastContainer, toast } from 'react-toastify'
 import { meta } from '../../site.config'
 import Input from '../UI/input'
