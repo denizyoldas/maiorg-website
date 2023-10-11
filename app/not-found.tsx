@@ -1,4 +1,5 @@
-import { useRouter } from 'next/router'
+'use client'
+
 import styled from 'styled-components'
 import MainLayout from '../components/layout/main-layout'
 
@@ -31,8 +32,6 @@ const Button = styled.button`
 `
 
 const ErrorPage = () => {
-  const router = useRouter()
-
   return (
     <MainLayout>
       <div
@@ -47,7 +46,6 @@ const ErrorPage = () => {
       >
         <Text>404</Text>
         <SubText>Aradığınız sayfa bulunamadı.</SubText>
-        <Button onClick={() => router.push('/')}>Anasayfa</Button>
       </div>
     </MainLayout>
   )

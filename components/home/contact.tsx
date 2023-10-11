@@ -1,3 +1,5 @@
+'use client'
+
 import { ToastContainer, toast } from 'react-toastify'
 import { meta } from '../../site.config'
 import Input from '../UI/input'
@@ -19,7 +21,7 @@ function Contact() {
   }
 
   return (
-    <section id="contact" className="py-12 sm:p-24">
+    <section id="contact" className="py-12 px-8 sm:p-24">
       <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-10">
         <div>
           <form

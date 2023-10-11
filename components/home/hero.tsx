@@ -1,7 +1,8 @@
-import Link from 'next/link'
+'use client'
 
 const Hero = () => {
   const goToId = (id: string) => {
+    console.log(id)
     const aboutSection = document.querySelector(`#${id}`)
     aboutSection?.scrollIntoView({ behavior: 'smooth' })
   }
@@ -25,7 +26,9 @@ const Hero = () => {
 
           <div className="mt-8 flex flex-wrap gap-4 text-center">
             <button
-              onClick={() => goToId('services')}
+              onClick={() => {
+                console.log('clicked')
+              }}
               className="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
             >
               Hizmetlerimiz

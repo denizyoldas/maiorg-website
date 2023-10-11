@@ -1,9 +1,20 @@
-import { NextPage } from 'next'
-import shortid from 'shortid'
-import Gallery from '../components/home/gallery'
-import Head from 'next/head'
+import { Metadata } from 'next'
 import MainLayout from '../components/layout/main-layout'
-import PageThumbnail from '../components/UI/page-thumbnail'
+import Hero from '../components/about/hero'
+import AboutUs from '../components/home/about-us'
+import Service from '../components/home/service'
+import Client from '../components/home/client'
+import Gallery from '../components/home/gallery'
+import shortid from 'shortid'
+import Team from '../components/about/team'
+import Info from '../components/home/info'
+import ContactForm from '../components/home/contact'
+
+export const metadata: Metadata = {
+  title: 'Mai Organizasyon | Hayallerinize dokunun',
+  description:
+    "Mai Organizasyon İstanbul'un Tuzla ilçesinde düğün, nişan, doğum günü, baby show, kurumsal organizasyonlarınız için hizmet vermektedir."
+}
 
 const LIST = [
   {
@@ -50,32 +61,17 @@ const LIST = [
   }
 ]
 
-const GalleryPage: NextPage<{ galleryList: any[] }> = ({ galleryList }) => {
+export default function Page() {
   return (
     <MainLayout>
-      <Head>
-        <title>Mai Organizasyon | Resimlerimiz</title>
-        <meta
-          name="description"
-          content="Mai Organizasyon resim galerisinden istediğiniz organizasyonlar için seçimler yapabilirsiniz."
-        />
-      </Head>
-      <PageThumbnail title="Resimlerimiz" />
-      <Gallery
-        list={galleryList}
-        style={{ backgroundColor: '#fff !important' }}
-        isMore={false}
-      />
+      <Hero />
+      <AboutUs />
+      <Service />
+      <Gallery list={LIST} />
+      <Client />
+      <Team />
+      <Info />
+      <ContactForm />
     </MainLayout>
   )
 }
-
-export function getStaticProps() {
-  return {
-    props: {
-      galleryList: LIST
-    }
-  }
-}
-
-export default GalleryPage
