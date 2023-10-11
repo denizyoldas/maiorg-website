@@ -28,20 +28,13 @@ const testimonials = [
     quote: `Oğlumuzun sünnetiyle birlikte, tanıştığımız Mai organizasyon'a çok teşekkür ederiz.
     İstediğimiz herşeyi eksiksik yerine getirdiler. Başarılarınızı diliyoruz.`,
     avatar: 'https://denizaksu.dev/images/avatar.jpg'
-  },
-  {
-    id: shortid.generate(),
-    name: 'Tunç',
-    quote: `Oğlumuzun sünnetiyle birlikte, tanıştığımız Mai organizasyon'a çok teşekkür ederiz.
-    İstediğimiz herşeyi eksiksik yerine getirdiler. Başarılarınızı diliyoruz.`,
-    avatar: 'https://denizaksu.dev/images/avatar.jpg'
   }
 ]
 
 function Client() {
   return (
     <section className="mx-auto px-8 py-24 sm:p-24">
-      <Title title="Müşteri Yorumları" type="center" />
+      <Title title="Müşteriler ne diyor?" type="center" />
       <div className="pt-10">
         <Swiper
           slidesPerView="auto"
@@ -73,7 +66,7 @@ function Client() {
         >
           {testimonials.map((item, index) => (
             <SwiperSlide key={item.id} className="h-full">
-              <div className="min-h-36 relative flex w-full flex-col items-center gap-4 rounded-lg bg-[#222] px-4 py-6 text-center text-white">
+              <div className="min-h-36 relative flex w-full flex-col items-center gap-4 rounded-lg border-2 px-4 py-6 text-center">
                 <h5>{item.name}</h5>
                 <p>{item.quote}</p>
               </div>

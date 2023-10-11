@@ -61,37 +61,6 @@ const LIST = [
   }
 ]
 
-const TEAM = [
-  {
-    name: 'Tuğçe Çakır',
-    position: 'Nedime',
-    image: 'https://i.pravatar.cc/150?u=a042581f4e29026704d',
-    description:
-      'Uzun sürelere yayılan bir organizasyon için, her şeyin en iyi şekilde olması için çalışıyoruz.'
-  },
-  {
-    name: 'Merve Çakır',
-    position: 'Nedime',
-    image: 'https://i.pravatar.cc/150?u=a042581f4e29026704f',
-    description:
-      'Uzun sürelere yayılan bir organizasyon için, her şeyin en iyi şekilde olması için çalışıyoruz.'
-  },
-  {
-    name: 'Aslı Balcı',
-    position: 'Nedime',
-    image: 'https://i.pravatar.cc/150?u=a042581f4e29026704x',
-    description:
-      'Uzun sürelere yayılan bir organizasyon için, her şeyin en iyi şekilde olması için çalışıyoruz.'
-  },
-  {
-    name: 'Ahmet Hamdi',
-    position: 'Kameraman',
-    image: 'https://i.pravatar.cc/150?u=a042581f4e29026704a',
-    description:
-      'Uzun sürelere yayılan bir organizasyon için, her şeyin en iyi şekilde olması için çalışıyoruz.'
-  }
-]
-
 export default function Page() {
   return (
     <MainLayout>
@@ -100,7 +69,7 @@ export default function Page() {
       <Service />
       <Gallery list={LIST} />
       <Client />
-      <Team list={TEAM} />
+      <Team />
       <Info />
       <ContactForm />
     </MainLayout>
