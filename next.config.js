@@ -9,10 +9,17 @@ const withMDX = require('@next/mdx')({
 })
 
 const nextConfig = withMDX({
-  // reactStrictMode: true,
-  // swcMinify: true,
+  output: 'standalone',
+  compiler: {
+    styledComponents: true
+  },
   images: {
-    domains: ['images.unsplash.com', 'img.icons8.com', 'i.pravatar.cc']
+    remotePatterns: [
+      { protocol: 'https', hostname: 'images.unsplash.com' },
+      { protocol: 'https', hostname: 'img.icons8.com' },
+      { protocol: 'https', hostname: 'i.pravatar.cc' },
+      { protocol: 'https', hostname: 'denizaksu.dev' }
+    ]
   },
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx']
 })

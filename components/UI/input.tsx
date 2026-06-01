@@ -6,14 +6,18 @@ interface Props {
   name: string
 }
 
+const inputClass =
+  'w-full rounded-xl border border-border bg-white px-4 py-3.5 text-sm text-warm-dark placeholder-warm-light outline-none transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/10'
+
 const Input = ({ type, placeholder, name }: Props) => {
   if (type === 'textarea') {
     return (
       <textarea
-        className="w-full rounded-md border border-gray-300 p-4 text-sm"
+        className={inputClass}
         placeholder={placeholder}
         name={name}
-      ></textarea>
+        rows={5}
+      />
     )
   }
 
@@ -22,7 +26,7 @@ const Input = ({ type, placeholder, name }: Props) => {
       type={type}
       placeholder={placeholder}
       name={name}
-      className="w-full rounded-md border-gray-300 p-4 outline-none"
+      className={inputClass}
     />
   )
 }

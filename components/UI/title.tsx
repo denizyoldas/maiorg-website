@@ -11,16 +11,18 @@ const Title = ({ title, subtitle, className, type = 'left' }: Props) => {
   return (
     <div
       className={cx(
-        'title flex flex-col',
+        'flex flex-col',
         type === 'center' && 'items-center text-center',
         type === 'left' && 'items-start',
         className
       )}
     >
-      <h2 className="section-title relative pb-1 text-center text-3xl font-bold uppercase">
+      <h2 className="font-serif text-3xl sm:text-4xl font-bold text-warm-dark">
         {title}
       </h2>
-      {subtitle && <p className="mt-2 text-center">{subtitle}</p>}
+      {subtitle && (
+        <p className="mt-3 text-warm-gray leading-relaxed max-w-xl">{subtitle}</p>
+      )}
     </div>
   )
 }
