@@ -3,5 +3,6 @@ module.exports = {
   arrowParens: 'avoid',
   trailingComma: 'none',
   semi: false,
-  plugins: [require('prettier-plugin-tailwindcss')]
+  plugins: ['prettier-plugin-tailwindcss'],
+  tailwindStylesheet: './app/globals.css'
 }

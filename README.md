@@ -1,34 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Mai Organizasyon
 
-## Getting Started
+Tuzla merkezli düğün ve özel gün organizasyon firması Mai Organizasyon'un web sitesi — https://www.maiorganizasyon.com
 
-First, run the development server:
+Next.js 16 (App Router, tamamen statik) · React 19 · Tailwind CSS 4
 
 ```bash
-npm run dev
-# or
-yarn dev
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # standalone çıktı (Dockerfile ile çalışır)
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## İçerik nerede?
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+| Dosya | İçerik |
+| --- | --- |
+| `lib/site.ts` | İletişim bilgileri, menü, yorumlar, süreç adımları, SSS |
+| `lib/services.ts` | Hizmetler (her biri `/hizmetler/<slug>` sayfası olur) |
+| `lib/images.ts` | Galeri fotoğrafları ve alt metinleri |
+| `lib/schema.ts` | JSON-LD (EventPlanner, Breadcrumb, FAQ) |
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Yeni hizmet eklemek için `lib/services.ts`'e bir kayıt ekleyin; sayfa, sitemap, footer linki ve iletişim formu seçeneği otomatik oluşur.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## SEO
 
-## Learn More
+- Sayfa başına title/description/canonical/OpenGraph
+- `sitemap.xml`, `robots.txt`, `manifest.webmanifest`, OG görseli (`app/opengraph-image.jpg`)
+- Structured data: LocalBusiness/EventPlanner, Service, BreadcrumbList, FAQPage, ImageGallery
+- `next/image` (AVIF/WebP, blur placeholder), `next/font` (self-hosted, latin-ext)
+- Google Analytics yalnızca production'da (`@next/third-parties`)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+İletişim formu sunucuya veri göndermez; bilgileri hazır bir WhatsApp mesajı olarak açar.

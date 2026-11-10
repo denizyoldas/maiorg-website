@@ -1,98 +1,59 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
-import { motion, useScroll, useMotionValueEvent } from 'framer-motion'
-import { useState } from 'react'
-import { HiMenu, HiX } from 'react-icons/hi'
+import { usePathname } from 'next/navigation'
+import { useEffect, useRef } from 'react'
+import { nav, waLink } from '@/lib/site'
+import logo from '@/public/images/logo.webp'
 
-const MENU = [
-  { label: 'Anasayfa', href: '#' },
-  { label: 'Hakkımızda', href: '#about' },
-  { label: 'Hizmetlerimiz', href: '#services' },
-  { label: 'Galeri', href: '#gallery' },
-  { label: 'İletişim', href: '#contact' }
-]
-
-export default function Header() {
-  const [scrolled, setScrolled] = useState(false)
-  const [mobileOpen, setMobileOpen] = useState(false)
-  const { scrollY } = useScroll()
-
-  useMotionValueEvent(scrollY, 'change', v => setScrolled(v > 60))
+export function Header() {
+  const path = usePathname()
+  const menu = useRef<HTMLDetailsElement>(null)
+  useEffect(() => {
+    if (menu.current) menu.current.open = false
+  }, [path])
+  const active = (href: string) => (href === '/' ? path === '/' : path.startsWith(href))
 
   return (
-    <>
-      <motion.header
-        initial={{ y: -80, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-        className={`fixed top-0 z-50 w-full transition-all duration-500 ${
-          scrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-sm py-3'
-            : 'bg-transparent py-6'
-        }`}
-      >
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 sm:px-12 lg:px-20">
-          <Link href="/">
-            <motion.div whileHover={{ scale: 1.02 }} className="cursor-pointer flex flex-col leading-none">
-              <span className="font-script text-2xl text-primary leading-none">Mai</span>
-              <span className={`text-[10px] font-semibold tracking-[0.3em] uppercase transition-colors duration-300 ${scrolled ? 'text-warm-dark' : 'text-warm-dark/80'}`}>
-                Organizasyon
-              </span>
-            </motion.div>
-          </Link>
+    <header className="sticky top-0 z-50 border-b border-line/60 bg-ivory/85 backdrop-blur-md">
+      <div className="container-x flex h-18 items-center justify-between gap-6">
+        <Link href="/" aria-label="Mai Organizasyon anasayfa" className="shrink-0">
+          <Image src={logo} alt="Mai Organizasyon" priority className="h-14 w-auto sm:h-16" />
+        </Link>
 
-          <ul className="hidden gap-8 sm:flex">
-            {MENU.map(({ label, href }) => (
-              <li key={label}>
-                <Link
-                  href={href}
-                  className="relative text-sm font-medium text-warm-dark transition-colors hover:text-primary group"
-                >
-                  {label}
-                  <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-primary transition-all duration-300 group-hover:w-full" />
-                </Link>
-              </li>
-            ))}
-          </ul>
-
-          <a
-            href="tel:+905343489348"
-            className="hidden sm:flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-5 py-2 text-xs font-semibold tracking-wide text-primary transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary"
-          >
-            Bize Ulaşın
-          </a>
-
-          <button
-            className="sm:hidden text-warm-dark p-1"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Menü aç/kapat"
-          >
-            {mobileOpen ? <HiX size={24} /> : <HiMenu size={24} />}
-          </button>
-        </nav>
-      </motion.header>
-
-      {/* Mobile menu */}
-      <motion.div
-        initial={false}
-        animate={mobileOpen ? { opacity: 1, y: 0, pointerEvents: 'auto' as const } : { opacity: 0, y: -12, pointerEvents: 'none' as const }}
-        transition={{ duration: 0.25 }}
-        className="fixed top-0 left-0 right-0 z-40 bg-white/98 backdrop-blur-md pt-20 pb-8 px-8 shadow-lg sm:hidden"
-      >
-        <ul className="flex flex-col gap-5">
-          {MENU.map(({ label, href }) => (
-            <li key={label}>
-              <Link href={href} className="text-lg font-serif text-warm-dark hover:text-primary transition-colors" onClick={() => setMobileOpen(false)}>
-                {label}
-              </Link>
-            </li>
+        <nav aria-label="Ana menü" className="hidden items-center gap-8 md:flex">
+          {nav.map(n => (
+            <Link key={n.href} href={n.href} aria-current={active(n.href) ? 'page' : undefined} className="relative text-sm tracking-wide text-muted transition hover:text-ink aria-[current=page]:text-ink aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-1.5 aria-[current=page]:after:h-px aria-[current=page]:after:bg-gold">
+              {n.label}
+            </Link>
           ))}
-        </ul>
-        <a href="tel:+905343489348" className="mt-6 btn-primary w-full justify-center" onClick={() => setMobileOpen(false)}>
-          Bize Ulaşın
+        </nav>
+
+        <a href={waLink('Merhaba, organizasyon için teklif almak istiyorum.')} target="_blank" rel="noopener" className="btn-dark hidden py-2.5! md:inline-flex">
+          Teklif Al
         </a>
-      </motion.div>
-    </>
+
+        <details ref={menu} className="group md:hidden">
+          <summary className="grid size-11 cursor-pointer list-none place-items-center" aria-label="Menüyü aç">
+            <span className="relative block h-3 w-6 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-ink before:transition after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-ink after:transition group-open:before:top-1.5 group-open:before:rotate-45 group-open:after:bottom-1.5 group-open:after:-rotate-45" />
+          </summary>
+          <nav aria-label="Mobil menü" className="fixed inset-x-0 top-18 h-[calc(100dvh-4.5rem)] bg-ivory px-4 pt-8">
+            <ul className="flex flex-col">
+              {nav.map(n => (
+                <li key={n.href} className="border-b border-line">
+                  <Link href={n.href} aria-current={active(n.href) ? 'page' : undefined} className="block py-5 font-serif text-4xl aria-[current=page]:text-gold-deep">
+                    {n.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <a href={waLink('Merhaba, organizasyon için teklif almak istiyorum.')} target="_blank" rel="noopener" className="btn-dark mt-8 w-full">
+              WhatsApp’tan Teklif Al
+            </a>
+          </nav>
+        </details>
+      </div>
+    </header>
   )
 }
