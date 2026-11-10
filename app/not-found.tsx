@@ -1,54 +1,12 @@
-'use client'
+import Link from 'next/link'
 
-import styled from 'styled-components'
-import MainLayout from '../components/layout/main-layout'
-
-const Text = styled.h1`
-  font-size: 100px;
-  font-weight: 700;
-  color: #000;
-`
-
-const SubText = styled.p`
-  font-size: 20px;
-  font-weight: 500;
-  color: #000;
-`
-
-const Button = styled.button`
-  font-size: 20px;
-  font-weight: 500;
-  color: #000;
-  background-color: #fff;
-  border: 1px solid #000;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #000;
-    color: #fff;
-  }
-`
-
-const ErrorPage = () => {
+export default function NotFound() {
   return (
-    <MainLayout>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          height: '100vh',
-          justifyContent: 'center',
-          alignItems: 'center',
-          textAlign: 'center'
-        }}
-      >
-        <Text>404</Text>
-        <SubText>Aradığınız sayfa bulunamadı.</SubText>
-      </div>
-    </MainLayout>
+    <section className="container-x flex min-h-[70dvh] flex-col items-start justify-center py-24">
+      <p className="eyebrow">404</p>
+      <h1 className="display mt-6 text-6xl sm:text-8xl">Bu sayfa <em className="text-gold-deep">bulunamadı.</em></h1>
+      <p className="mt-6 max-w-md text-lg text-muted">Aradığınız sayfa taşınmış ya da hiç var olmamış olabilir.</p>
+      <Link href="/" className="btn-dark mt-10">Anasayfaya dön</Link>
+    </section>
   )
 }
-
-export default ErrorPage
